@@ -1,0 +1,71 @@
+name: Dados (cron semanal)
+
+# Pipeline de dados (spec §3.3). Roda `fetch-data`, que só grava se metadados e
+# valores-âncora conferirem, e commita apenas se algum número mudou.
+#
+# Os backfills (CVM e B3/CETIP) NÃO rodam aqui: são cargas únicas, versionadas.
+
+on:
+  schedule:
+    # Segunda-feira, 09:00 UTC (06:00 em Brasília). Os saldos do BCB saem até
+    # quatro semanas após o mês de referência, então semanal é folgado.
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: dados
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    name: Atualizar séries do SGS
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Aborta em qualquer divergência de metadados, unidade ou valor-âncora,
+      # deixando a última versão íntegra no lugar. Nunca publica dado parcial.
+      - name: Buscar dados
+        run: npm run fetch-data
+
+      # Validação de schema e coerência antes de commitar qualquer número.
+      - name: Validar os JSONs gerados
+        run: npx vitest run --project unit
+
+      - name: Commitar se houver mudança
+        id: commit
+        run: |
+          if git diff --quiet -- src/data/generated; then
+            echo "mudou=false" >> "$GITHUB_OUTPUT"
+            echo "Nenhuma mudança nos dados."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/generated
+          MES=$(node -p "require('./src/data/generated/meta.json').mesReferencia")
+          git commit -m "dados: atualizacao automatica (referencia ${MES})"
+          git push
+          echo "mudou=true" >> "$GITHUB_OUTPUT"
+
+      # O deploy da Vercel dispara pelo push acima, e o CI corre em cima dele:
+      # dado novo só vai ao ar depois do portão passar.
+      - name: Resumo
+        run: |
+          if [ "${{ steps.commit.outputs.mudou }}" = "true" ]; then
+            echo "Dados atualizados e commitados." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Sem mudança nos dados nesta execução." >> "$GITHUB_STEP_SUMMARY"
+          fi

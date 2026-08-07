@@ -7,3 +7,17 @@ out/
 .DS_Store
 
 .claude/settings.local.json
+
+# Testes e verificação
+coverage/
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+
+# Capturas de tela usadas para crítica visual durante a construção
+.shots/
+
+# NÃO ignorar src/data/generated: os JSONs são versionados de propósito.
+# É o que garante que o build seja reprodutível sem rede e que uma alteração
+# de número apareça como diff revisável.

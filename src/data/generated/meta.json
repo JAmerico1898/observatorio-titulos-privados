@@ -1,0 +1,11 @@
+{
+  "processadoEm": "2026-08-07T22:34:00.544Z",
+  "mesReferencia": "2026-06",
+  "fontes": [
+    {
+      "nome": "BCB — SGS",
+      "ultimoPeriodo": "2026-06",
+      "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.28851/dados?formato=json"
+    }
+  ]
+}

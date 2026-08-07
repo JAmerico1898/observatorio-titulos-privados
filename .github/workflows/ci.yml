@@ -1,0 +1,65 @@
+name: CI
+
+# Portão de qualidade (spec §7.3). Roda a cada push e PR; o deploy da Vercel
+# fica condicionado a este workflow passar.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verificar:
+    name: Portão de entrega
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Tipos
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Testes unitários e de componente (com cobertura)
+        run: npx vitest run --coverage --project unit --project componente
+
+      # Consulta o BCB ao vivo: é o teste que pega renomeação de série, troca
+      # de unidade e troca silenciosa do conteúdo de um código.
+      - name: Teste de metadados e valor-âncora
+        run: npm run test:meta
+
+      - name: Build
+        run: npm run build
+
+      - name: Navegadores do Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: E2E e acessibilidade
+        run: npm run test:e2e
+
+      - name: Evals da §7.2
+        run: npm run evals
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7

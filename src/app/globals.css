@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+/*
+  Fonte única de tokens do painel (spec §2.1).
+  Nenhum hex e nenhum font-family pode aparecer em componente — o eval
+  "Coerência visual" da §7.2 falha o build se aparecer.
+
+  Direção: registro/medição. O painel mede um estoque, então o chão é papel
+  de razão (levemente frio) e os números usam face monoespaçada tabular.
+*/
+
+:root {
+  /* Superfícies */
+  --paper: #f2f4f2;
+  --surface: #fcfcfb;
+  --surface-sunken: #eceeec;
+
+  /* Tinta */
+  --ink: #141b22;
+  --ink-2: #4a5560;
+  /* 4,58:1 sobre --paper e 4,93:1 sobre --surface. O tom anterior (#6e7a85)
+     media 3,96:1 e reprovava no axe: é a cor dos eyebrows, dos rótulos de eixo
+     e das legendas de mês, tudo texto pequeno. */
+  --ink-3: #65707a;
+  --ink-inverse: #fcfcfb;
+
+  /* Traços */
+  --rule: #dde2de;
+  --rule-strong: #c3cac5;
+
+  /* Paleta categórica — validada por scripts/validate_palette.js (dataviz)
+     em superfície #fcfcfb: banda de luminosidade, piso de croma, separação
+     CVD adjacente e piso de visão normal, todos PASS.
+     Slot 1 e 2 carregam a tese: banco × mercado de capitais. */
+  --series-1: #2a78d6; /* crédito bancário */
+  --series-2: #eb6834; /* mercado de capitais */
+  --series-3: #1baf7a;
+  --series-4: #eda100;
+  --series-5: #e87ba4;
+  --series-6: #008300;
+  --series-7: #4a3aa7;
+  --series-8: #e34948;
+
+  /* Semânticos de variação. Estoque não tem "bom" nem "ruim" (spec §5). */
+  --var-up: #17683f;
+  --var-down: #a3311f;
+  --var-flat: var(--ink-3);
+
+  /* Selos e blocos */
+  --seal-bg: #e8eef7;
+  --seal-ink: #1d4f8f;
+  --frozen-bg: #f0eee8;
+  --frozen-ink: #6b5d3e;
+  --frozen-rule: #cdc3a8;
+
+  --radius: 3px;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-ink-inverse: var(--ink-inverse);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-series-1: var(--series-1);
+  --color-series-2: var(--series-2);
+  --color-series-3: var(--series-3);
+  --color-series-4: var(--series-4);
+  --color-series-5: var(--series-5);
+  --color-series-6: var(--series-6);
+  --color-series-7: var(--series-7);
+  --color-series-8: var(--series-8);
+  --color-var-up: var(--var-up);
+  --color-var-down: var(--var-down);
+  --color-var-flat: var(--var-flat);
+  --color-seal-bg: var(--seal-bg);
+  --color-seal-ink: var(--seal-ink);
+  --color-frozen-bg: var(--frozen-bg);
+  --color-frozen-ink: var(--frozen-ink);
+  --color-frozen-rule: var(--frozen-rule);
+
+  --font-display: var(--font-newsreader);
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+
+  --radius-token: var(--radius);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Números tabulares em qualquer lugar que use a face mono. */
+.tnum {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Assinatura: chão de papel milimetrado. O painel mede — o fundo mostra a régua.
+   Usado só no hero e nos blocos de gráfico, nunca na página inteira. */
+.grid-ground {
+  background-image:
+    linear-gradient(to right, var(--rule) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--rule) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-position: -1px -1px;
+}
+
+/* Eyebrow de procedência: todo bloco declara de onde veio o número. */
+.eyebrow {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--series-1);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
