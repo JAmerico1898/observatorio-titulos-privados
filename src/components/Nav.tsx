@@ -13,7 +13,7 @@ export function Nav() {
     <header className="sticky top-0 z-40 border-b border-rule bg-paper/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-[1180px] flex-wrap items-baseline gap-x-6 gap-y-2 px-5 py-3">
         <Link href="/" className="font-display text-base font-semibold tracking-tight text-ink">
-          Monitor de Títulos Privados
+          Observatório de Títulos Privados
         </Link>
         <nav aria-label="Seções do painel" className="flex flex-wrap gap-x-4 gap-y-1">
           {PAGINAS.slice(1).map((p) => {

@@ -65,7 +65,7 @@ export default function Page() {
     <>
       <Cabecalho
         eyebrow="Metodologia"
-        titulo="Sobre este monitor"
+        titulo="Sobre o Observatório"
         resumo="Todo número aqui pode ser refeito por quem quiser conferir. Esta página lista as fontes, os perímetros, a fórmula de cada indicador calculado, e — igualmente importante — o que não foi possível medir."
       />
 
@@ -278,7 +278,7 @@ export default function Page() {
       <Secao titulo="Independência e processamento">
         <div className="rounded-[var(--radius)] border border-rule bg-surface p-5">
           <p className="max-w-prose text-sm leading-relaxed text-ink-2">
-            Monitor independente, de finalidade educacional, <strong>sem vínculo</strong> com o Banco
+            Observatório independente, de finalidade educacional, <strong>sem vínculo</strong> com o Banco
             Central do Brasil, a CVM ou a B3. Os dados são públicos e de acesso livre; a
             interpretação é do painel e não representa posição oficial de nenhuma dessas
             instituições.

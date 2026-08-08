@@ -62,7 +62,7 @@ test.describe("todas as páginas", () => {
       expect(resposta?.status()).toBe(200);
 
       await expect(page.locator("h1")).toHaveCount(1);
-      await expect(page).toHaveTitle(/Monitor de Títulos Privados/);
+      await expect(page).toHaveTitle(/Observatório de Títulos Privados/);
       await expect(page.getByRole("navigation", { name: "Seções do painel" })).toBeVisible();
       await expect(page.getByRole("contentinfo")).toBeVisible();
       expect(erros, `erros de runtime em ${p.href}`).toEqual([]);
@@ -144,7 +144,7 @@ test("Sobre publica fonte, perímetro e limitações", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Fontes" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Perímetros" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Limitações declaradas" })).toBeVisible();
-  await expect(page.getByText(/Monitor independente, de finalidade educacional/)).toBeVisible();
+  await expect(page.getByText(/Observatório independente, de finalidade educacional/)).toBeVisible();
   await expect(page.getByText(`SGS ${sgs.series[0].codigo}`).first()).toBeVisible();
   // O mês de referência exibido é o que o pipeline gravou.
   const [ano, m] = meta.mesReferencia.split("-");

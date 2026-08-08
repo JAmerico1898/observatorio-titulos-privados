@@ -32,8 +32,8 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Monitor de Títulos Privados",
-    template: "%s · Monitor de Títulos Privados",
+    default: "Observatório de Títulos Privados",
+    template: "%s · Observatório de Títulos Privados",
   },
   description:
     "Estoque dos títulos privados de renda fixa no Brasil e a migração do crédito às empresas do balanço dos bancos para o mercado de capitais. Dados oficiais do BCB e da CVM.",

@@ -1,8 +1,27 @@
 import { describe, expect, it } from "vitest";
 
-import { SERIES, TOLERANCIA_ANCORA } from "@/data/sources";
+import { SERIES, TOLERANCIA_ANCORA, type SerieSGS } from "@/data/sources";
 import { buscarMetadadosCkan, buscarSerieSGS } from "../../scripts/lib/bcb";
-import { truncar, valorEm } from "@/lib/transforms";
+import { truncar, valorEm, type Serie } from "@/lib/transforms";
+
+/**
+ * Cada série é baixada **uma vez** por execução, não uma vez por asserção.
+ *
+ * Sem isto, 16 séries × 4 testes que precisam do dado viravam ~80 requisições
+ * ao BCB em paralelo, e a origem passava a responder devagar ou recusar — o
+ * teste falhava por excesso de zelo, não por problema real na fonte.
+ */
+const cacheSerie = new Map<number, Promise<Serie>>();
+const serieDe = (s: SerieSGS) => {
+  if (!cacheSerie.has(s.codigo)) cacheSerie.set(s.codigo, buscarSerieSGS(s));
+  return cacheSerie.get(s.codigo)!;
+};
+
+const cacheMeta = new Map<number, ReturnType<typeof buscarMetadadosCkan>>();
+const metaDe = (codigo: number) => {
+  if (!cacheMeta.has(codigo)) cacheMeta.set(codigo, buscarMetadadosCkan(codigo));
+  return cacheMeta.get(codigo)!;
+};
 
 /**
  * Teste de metadados e valor-âncora (spec §3.2).
@@ -35,13 +54,13 @@ describe.each(SERIES.map((s) => [s.codigo, s.rotulo, s] as const))(
   "SGS %i — %s",
   (_codigo, _rotulo, serie) => {
     it("continua registrada no portal de dados abertos com o mesmo título", async () => {
-      const meta = await buscarMetadadosCkan(serie.codigo);
+      const meta = await metaDe(serie.codigo);
       expect(meta.encontrado, `série ${serie.codigo} sumiu do CKAN`).toBe(true);
       expect(meta.titulo).toBe(serie.titulo);
     });
 
     it("mantém a unidade de medida que o pipeline assume", async () => {
-      const meta = await buscarMetadadosCkan(serie.codigo);
+      const meta = await metaDe(serie.codigo);
       if (serie.verificacaoUnidade === "ckan") {
         expect(meta.unidade).toBe(serie.unidadeCkan);
       } else {
@@ -55,7 +74,7 @@ describe.each(SERIES.map((s) => [s.codigo, s.rotulo, s] as const))(
     });
 
     it("bate com o valor-âncora, provando que o código não trocou de conteúdo", async () => {
-      const pontos = await buscarSerieSGS(serie);
+      const pontos = await serieDe(serie);
       const valor = valorEm(pontos, serie.ancora.mes);
       expect(valor, `mês-âncora ${serie.ancora.mes} ausente`).not.toBeNull();
       // Tolerância porque o BCB revisa saldos retroativamente; larga o
@@ -65,7 +84,7 @@ describe.each(SERIES.map((s) => [s.codigo, s.rotulo, s] as const))(
     });
 
     it("é mensal e alcança a janela canônica do painel", async () => {
-      const pontos = await buscarSerieSGS(serie);
+      const pontos = await serieDe(serie);
       expect(pontos.length).toBeGreaterThan(0);
       for (const p of pontos) expect(p.mes).toMatch(/^\d{4}-(0[1-9]|1[0-2])$/);
       expect(pontos.at(-1)!.mes >= "2026-01").toBe(true);
@@ -75,7 +94,7 @@ describe.each(SERIES.map((s) => [s.codigo, s.rotulo, s] as const))(
       // Só a janela canônica do painel. Fora dela o domínio é outro: a Selic
       // anualizada passa de 250% na hiperinflação dos anos 1980, e nenhuma
       // dessas observações chega a ser publicada aqui.
-      const pontos = truncar(await buscarSerieSGS(serie));
+      const pontos = truncar(await serieDe(serie));
       const valores = pontos.map((p) => p.valor).filter((v): v is number => v !== null);
       expect(valores.length).toBeGreaterThan(0);
       if (serie.unidade === "percent-aa") {

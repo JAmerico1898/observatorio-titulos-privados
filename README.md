@@ -1,4 +1,4 @@
-# Monitor de Títulos Privados
+# Observatório de Títulos Privados
 
 Painel do **Laboratório de Mercado Financeiro (COPPEAD–FGV–UCAM)** sobre o estoque de renda fixa
 privada no Brasil e a **desintermediação financeira** — a migração do crédito às empresas do balanço

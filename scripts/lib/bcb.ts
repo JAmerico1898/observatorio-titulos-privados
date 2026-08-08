@@ -6,7 +6,15 @@ import { SGS_DADOS, CKAN_METADADOS, type SerieSGS } from "@/data/sources";
 import { zRespostaSGS } from "@/lib/schemas";
 import type { Serie } from "@/lib/transforms";
 
-export async function buscarComRetry(url: string, tentativas = 3): Promise<Response> {
+/**
+ * Busca com retry e recuo exponencial.
+ *
+ * Cinco tentativas, e não três, porque o SGS estrangula quando recebe muitas
+ * requisições seguidas — o suficiente para derrubar uma execução inteira do
+ * cron por um soluço passageiro da origem. Só 4xx (fora 429) falha na hora:
+ * esse é erro nosso e não melhora com espera.
+ */
+export async function buscarComRetry(url: string, tentativas = 5): Promise<Response> {
   let ultimoErro: unknown;
   for (let i = 0; i < tentativas; i++) {
     try {
@@ -22,7 +30,9 @@ export async function buscarComRetry(url: string, tentativas = 3): Promise<Respo
     } catch (e) {
       ultimoErro = e;
     }
-    await new Promise((res) => setTimeout(res, 800 * (i + 1)));
+    if (i < tentativas - 1) {
+      await new Promise((res) => setTimeout(res, 1000 * 2 ** i));
+    }
   }
   throw ultimoErro instanceof Error ? ultimoErro : new Error(String(ultimoErro));
 }
