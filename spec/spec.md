@@ -70,7 +70,7 @@ Qualquer que seja o nível aplicado, os tokens resultantes (cores, fontes, raios
 - **TypeScript + Next.js (App Router) + React + Tailwind v4 + shadcn/ui (ícones lucide)**; **Recharts** para gráficos, com paleta derivada dos tokens do tema.
 - Componentes base shadcn (`Card`, `Button`, `Badge`, `Tabs`) + três componentes de domínio do painel: `KpiCard`, `ChartBlock`, `DataTable` (seção 5).
 - Publica no **GitHub + Vercel** (deploy apenas do branch principal, condicionado ao CI verde).
-- Repositório: `https://github.com/JAmerico1898/monitor-titulos-privados` (público).
+- Repositório: `https://github.com/JAmerico1898/observatorio-titulos-privados` (público).
 
 ## 3. Arquitetura de dados
 
@@ -262,7 +262,7 @@ Valem para toda tarefa deste projeto, salvo instrução explícita em contrário
 | 8 | Sobre | — | metodologia, fórmulas, perímetros e limitações |
 
 ## 10. Entrega e publicação
-1. `git init`, primeiro commit, push para `https://github.com/JAmerico1898/monitor-titulos-privados` (já renomeado e público).
+1. `git init`, primeiro commit, push para `https://github.com/JAmerico1898/observatorio-titulos-privados` (já renomeado e público).
 2. Resolver a referência de UI pela §2.1 (nível 1 — skill `frontend-design`), materializar os tokens em `globals.css` e registrar o nível no README; configurar os dois workflows (CI de qualidade + cron de dados) e a proteção do branch `main`.
 3. Rodar os backfills uma vez localmente (`npm run backfill:fidc`, `npm run backfill:cetip`) e `npm run fetch-data` para materializar `sources.ts` e os JSONs iniciais; conferir o teste de metadados.
 4. Conectar à Vercel; deploy contínuo **apenas** do main, condicionado ao CI verde.

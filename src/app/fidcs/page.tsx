@@ -64,7 +64,6 @@ export default function Page() {
   return (
     <>
       <Cabecalho
-        eyebrow="Informes mensais · CVM"
         titulo="FIDCs, por dentro"
         resumo="Os fundos de investimento em direitos creditórios são a engenharia do crédito estruturado brasileiro. Esta página mede o tamanho, a qualidade da carteira e o colchão de subordinação que protege o cotista sênior."
       />

@@ -13,11 +13,7 @@ export default function Page() {
 
   return (
     <>
-      <Cabecalho
-        eyebrow={`${verbetes.length} verbetes`}
-        titulo="Glossário"
-        resumo="Jargão é permitido desde que definido. Cada termo tem âncora própria: os links das outras páginas apontam direto para o verbete."
-      />
+      <Cabecalho titulo="Glossário" />
 
       <nav aria-label="Índice do glossário" className="border-b border-rule py-6">
         <ul className="flex flex-wrap gap-x-3 gap-y-1.5">
@@ -37,7 +33,7 @@ export default function Page() {
       <dl className="divide-y divide-rule">
         {verbetes.map((v) => (
           <div key={v.id} id={v.id} className="scroll-mt-24 py-6">
-            <dt className="font-display text-xl leading-tight font-medium text-ink">{v.termo}</dt>
+            <dt className="font-display text-xl leading-tight font-bold text-ink">{v.termo}</dt>
             <dd className="mt-2 max-w-prose text-sm leading-relaxed text-ink-2">{v.definicao}</dd>
           </div>
         ))}

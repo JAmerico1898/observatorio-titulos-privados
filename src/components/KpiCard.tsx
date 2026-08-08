@@ -56,15 +56,19 @@ export function KpiCard({
     tipoVariacao === "pp" ? formatPP(variacao) : formatVar(variacao);
 
   return (
-    <div className="flex flex-col gap-2 rounded-[var(--radius)] border border-rule bg-surface p-4">
+    <div className="card-surface flex flex-col gap-2 p-5">
       <div className="flex items-start justify-between gap-2">
         <span className="eyebrow">{fonte}</span>
         {indicador && <Badge variant="calculo">cálculo próprio</Badge>}
       </div>
 
+      <div className="data-ribbon" />
+
       <p className="text-sm leading-snug text-ink-2">{rotulo}</p>
 
-      <p className="tnum text-2xl leading-none font-medium text-ink">{valor}</p>
+      <p className="tnum font-display text-3xl leading-none font-extrabold tracking-tight text-ink">
+        {valor}
+      </p>
 
       <div className="mt-auto flex flex-wrap items-center gap-x-2 gap-y-1 pt-1 text-xs">
         {variacao !== null && (

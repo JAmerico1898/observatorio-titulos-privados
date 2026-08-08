@@ -5,32 +5,45 @@
   Nenhum hex e nenhum font-family pode aparecer em componente — o eval
   "Coerência visual" da §7.2 falha o build se aparecer.
 
-  Direção: registro/medição. O painel mede um estoque, então o chão é papel
-  de razão (levemente frio) e os números usam face monoespaçada tabular.
+  Direção (override da spec, pedido do autor): a estética segue o
+  "Almanaque Financeiro da Série A" (football-clubs-financials) — chão slate
+  com grade de pontos, superfícies brancas em cartão com sombra leve, fita de
+  dado azul, tipografia Public Sans + Inter, rótulos micro em caixa alta.
 */
 
 :root {
   /* Superfícies */
-  --paper: #f2f4f2;
-  --surface: #fcfcfb;
-  --surface-sunken: #eceeec;
+  --paper: #f8fafc;
+  --surface: #ffffff;
+  --surface-sunken: #f1f5f9;
 
   /* Tinta */
-  --ink: #141b22;
-  --ink-2: #4a5560;
-  /* 4,58:1 sobre --paper e 4,93:1 sobre --surface. O tom anterior (#6e7a85)
-     media 3,96:1 e reprovava no axe: é a cor dos eyebrows, dos rótulos de eixo
-     e das legendas de mês, tudo texto pequeno. */
-  --ink-3: #65707a;
-  --ink-inverse: #fcfcfb;
+  --ink: #0f172a;
+  --ink-2: #475569;
+  /* Micro-rótulos (eyebrow, eixos, legendas): 4,6:1 sobre --paper. */
+  --ink-3: #64748b;
+  --ink-inverse: #ffffff;
 
   /* Traços */
-  --rule: #dde2de;
-  --rule-strong: #c3cac5;
+  --rule: #e2e8f0;
+  --rule-strong: #cbd5e1;
 
-  /* Paleta categórica — validada por scripts/validate_palette.js (dataviz)
-     em superfície #fcfcfb: banda de luminosidade, piso de croma, separação
-     CVD adjacente e piso de visão normal, todos PASS.
+  /* Marca — mesmos quatro tons da referência. */
+  --brand-blue: #1565c0;
+  --brand-gold: #f9a825;
+  --brand-green: #2e7d32;
+  --brand-red: #c62828;
+
+  /* Hero: mesmo tratamento da referência (foto + gradiente escuro e tipo
+     branco), na família azul da marca, que é a cor do assunto aqui. */
+  --hero-de: #1565c0;
+  --hero-ate: #0b2f5c;
+  --dot: #cbd5e1;
+
+  /* Paleta categórica — validada por scripts/validate_palette.js (dataviz):
+     banda de luminosidade, piso de croma, separação CVD adjacente e piso de
+     visão normal, todos PASS. Preservada intacta: é cor de dado, não de
+     interface, e refazê-la invalidaria a checagem de daltonismo.
      Slot 1 e 2 carregam a tese: banco × mercado de capitais. */
   --series-1: #2a78d6; /* crédito bancário */
   --series-2: #eb6834; /* mercado de capitais */
@@ -42,18 +55,18 @@
   --series-8: #e34948;
 
   /* Semânticos de variação. Estoque não tem "bom" nem "ruim" (spec §5). */
-  --var-up: #17683f;
-  --var-down: #a3311f;
+  --var-up: var(--brand-green);
+  --var-down: var(--brand-red);
   --var-flat: var(--ink-3);
 
   /* Selos e blocos */
   --seal-bg: #e8eef7;
-  --seal-ink: #1d4f8f;
-  --frozen-bg: #f0eee8;
-  --frozen-ink: #6b5d3e;
-  --frozen-rule: #cdc3a8;
+  --seal-ink: #10457f;
+  --frozen-bg: #fdf6e3;
+  --frozen-ink: #8a6100;
+  --frozen-rule: #f0dfae;
 
-  --radius: 3px;
+  --radius: 0.75rem;
 }
 
 @theme inline {
@@ -66,6 +79,10 @@
   --color-ink-inverse: var(--ink-inverse);
   --color-rule: var(--rule);
   --color-rule-strong: var(--rule-strong);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-green: var(--brand-green);
+  --color-brand-red: var(--brand-red);
   --color-series-1: var(--series-1);
   --color-series-2: var(--series-2);
   --color-series-3: var(--series-3);
@@ -83,9 +100,11 @@
   --color-frozen-ink: var(--frozen-ink);
   --color-frozen-rule: var(--frozen-rule);
 
-  --font-display: var(--font-newsreader);
-  --font-sans: var(--font-plex-sans);
-  --font-mono: var(--font-plex-mono);
+  /* Public Sans nos títulos e nos números; Inter no corpo e nos rótulos —
+     o mesmo par da referência. */
+  --font-display: var(--font-public-sans);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-inter);
 
   --radius-token: var(--radius);
 }
@@ -97,34 +116,152 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Números tabulares em qualquer lugar que use a face mono. */
+/* Assinatura da referência: grade de pontos fixa atrás de tudo. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(circle, var(--dot) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Números alinhados em coluna. A face é a mesma do corpo — a referência não
+   usa monoespaçada —, mas com algarismos de largura fixa. */
 .tnum {
-  font-family: var(--font-mono), ui-monospace, monospace;
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum" 1;
 }
 
-/* Assinatura: chão de papel milimetrado. O painel mede — o fundo mostra a régua.
-   Usado só no hero e nos blocos de gráfico, nunca na página inteira. */
-.grid-ground {
-  background-image:
-    linear-gradient(to right, var(--rule) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--rule) 1px, transparent 1px);
-  background-size: 28px 28px;
-  background-position: -1px -1px;
+/* Fita de dado: barra azul de 24px que abre todo cartão de conteúdo. */
+.data-ribbon {
+  height: 2px;
+  width: 24px;
+  background-color: var(--brand-blue);
 }
 
 /* Eyebrow de procedência: todo bloco declara de onde veio o número. */
 .eyebrow {
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 0.6875rem;
-  letter-spacing: 0.1em;
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--ink-3);
 }
 
+@layer components {
+  /* Superfície de cartão — vidro sobre a grade de pontos. */
+  .card-surface {
+    border-radius: var(--radius);
+    border: 1px solid var(--rule);
+    background-color: color-mix(in srgb, var(--surface) 95%, transparent);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 1px 2px 0 rgb(15 23 42 / 0.05);
+  }
+
+  /* Cartão de navegação com sotaque lateral (--card-accent). */
+  .nav-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: var(--radius);
+    border: 1px solid var(--rule);
+    background-color: var(--surface);
+    box-shadow: 0 1px 2px 0 rgb(15 23 42 / 0.05);
+    transition:
+      transform 0.2s ease-out,
+      box-shadow 0.2s ease-out;
+  }
+
+  .nav-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0.25rem;
+    border-radius: 9999px;
+    opacity: 0.6;
+    background-color: var(--card-accent, var(--brand-blue));
+    transition: opacity 0.2s ease-out;
+  }
+
+  .nav-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px -2px rgb(15 23 42 / 0.12);
+  }
+
+  .nav-card:hover::before {
+    opacity: 1;
+  }
+
+  .nav-card:active {
+    transform: scale(0.99);
+  }
+
+  /* Pílulas da navegação entre módulos. */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    white-space: nowrap;
+    border-radius: 9999px;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--ink-2);
+    background-color: color-mix(in srgb, var(--surface) 70%, transparent);
+    transition: all 0.2s ease-out;
+  }
+
+  .pill:hover {
+    background-color: var(--surface);
+    color: var(--ink);
+    box-shadow: 0 1px 2px 0 rgb(15 23 42 / 0.06);
+  }
+
+  .pill-ativa {
+    background-color: var(--brand-green);
+    color: var(--ink-inverse);
+    box-shadow: 0 1px 2px 0 rgb(15 23 42 / 0.1);
+  }
+
+  .pill-ativa:hover {
+    background-color: var(--brand-green);
+    color: var(--ink-inverse);
+  }
+
+  /* Faixa de topo da home: gradiente e tipo branco, como na referência. */
+  .hero-band {
+    background-image: linear-gradient(to bottom, var(--hero-de) 0%, var(--hero-ate) 100%);
+  }
+
+  /* Rodapé em vidro. */
+  .glass-footer {
+    background-color: color-mix(in srgb, var(--surface) 92%, transparent);
+    backdrop-filter: blur(12px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
 :where(a, button, [tabindex]):focus-visible {
-  outline: 2px solid var(--series-1);
+  outline: 2px solid var(--brand-blue);
   outline-offset: 2px;
   border-radius: 2px;
 }

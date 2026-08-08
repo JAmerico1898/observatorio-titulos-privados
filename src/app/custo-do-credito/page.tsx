@@ -32,7 +32,6 @@ export default function Page() {
   return (
     <>
       <Cabecalho
-        eyebrow="SGS 25351, 25352, 27443 · BCB"
         titulo="O preço de ficar no banco"
         resumo="O Indicador de Custo do Crédito mede quanto custa, na média, a carteira de crédito em aberto do sistema financeiro. É o mecanismo causal da desintermediação: crédito bancário caro empurra a empresa para o mercado."
       />

@@ -60,7 +60,6 @@ export default function Page() {
   return (
     <>
       <Cabecalho
-        eyebrow="Página-tese · SGS 28846, 28848, 28851 · BCB"
         titulo="O crédito às empresas mudou de balcão"
         resumo="O estoque de títulos de dívida emitidos por empresas ultrapassou o saldo de empréstimos bancários a empresas. Esta página mede quando isso aconteceu, em que velocidade, e por que a magnitude do fenômeno depende de onde se traça o perímetro."
       />

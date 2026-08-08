@@ -64,8 +64,7 @@ export default function Page() {
   return (
     <>
       <Cabecalho
-        eyebrow="Metodologia"
-        titulo="Sobre o Observatório"
+        titulo="Metodologia"
         resumo="Todo número aqui pode ser refeito por quem quiser conferir. Esta página lista as fontes, os perímetros, a fórmula de cada indicador calculado, e — igualmente importante — o que não foi possível medir."
       />
 
@@ -183,7 +182,7 @@ export default function Page() {
         <dl className="divide-y divide-rule rounded-[var(--radius)] border border-rule bg-surface">
           {INDICADORES.map((i) => (
             <div key={i.id} id={`indicador-${i.id}`} className="scroll-mt-24 p-5">
-              <dt className="font-display text-lg leading-tight font-medium text-ink">{i.nome}</dt>
+              <dt className="font-display text-lg leading-tight font-bold text-ink">{i.nome}</dt>
               <dd className="mt-1.5 space-y-1.5">
                 <p className="tnum text-sm text-ink">{i.formula}</p>
                 <p className="max-w-prose text-sm leading-relaxed text-ink-2">{i.nota}</p>
@@ -297,7 +296,7 @@ export default function Page() {
             </div>
             <div>
               <dt className="eyebrow">Atualização</dt>
-              <dd className="text-ink">Semanal, automática</dd>
+              <dd className="text-ink">Mensal</dd>
             </div>
           </dl>
         </div>

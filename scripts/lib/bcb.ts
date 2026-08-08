@@ -19,7 +19,7 @@ export async function buscarComRetry(url: string, tentativas = 5): Promise<Respo
   for (let i = 0; i < tentativas; i++) {
     try {
       const r = await fetch(url, {
-        headers: { accept: "application/json", "user-agent": "monitor-titulos-privados" },
+        headers: { accept: "application/json", "user-agent": "observatorio-titulos-privados" },
       });
       if (r.ok) return r;
       // 4xx não melhora com retry — falhe alto na hora (spec §8, regra 12).

@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Link from "next/link";
 
 import { NotaTecnica, Secao } from "@/components/Cabecalho";
@@ -29,6 +30,20 @@ const DESTAQUES: Record<string, string> = {
   "/sobre": "Fontes, fórmulas, perímetros e o que ficou de fora.",
 };
 
+/**
+ * Sotaque lateral de cada cartão (a barra colorida da referência). Aponta
+ * sempre para um token — a cor mora em globals.css, não aqui.
+ */
+const SOTAQUES: Record<string, string> = {
+  "/captacao-bancaria": "var(--series-1)",
+  "/mercado-de-capitais": "var(--series-2)",
+  "/fidcs": "var(--brand-gold)",
+  "/credito-e-desintermediacao": "var(--brand-blue)",
+  "/custo-do-credito": "var(--brand-red)",
+  "/glossario": "var(--brand-green)",
+  "/sobre": "var(--ink-3)",
+};
+
 export default function Page() {
   const mes = meta.mesReferencia;
 
@@ -54,22 +69,24 @@ export default function Page() {
 
   return (
     <>
-      <section className="border-b border-rule py-10">
-        <p className="eyebrow">Laboratório de Mercado Financeiro · COPPEAD–FGV–UCAM</p>
-        <h1 className="mt-2 max-w-4xl font-display text-5xl leading-[1.05] font-semibold tracking-tight text-ink sm:text-6xl">
-          O estoque de títulos privados, medido
+      <section className="hero-band mt-6 rounded-[var(--radius)] px-8 py-12 shadow-sm sm:px-12">
+        <h1 className="max-w-4xl font-display text-5xl leading-[1.05] font-extrabold tracking-tight text-ink-inverse sm:text-6xl">
+          Sobre o Observatório
         </h1>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-2">
+        <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-inverse/90">
           Quanto existe emitido em renda fixa privada no Brasil, como esse estoque se reparte entre
           o funding bancário e o mercado de capitais, e a que custo as empresas se financiam no
           banco. Séries oficiais do Banco Central e da CVM, sem fonte autenticada, processadas em{" "}
           {formatMes(mes)}.
         </p>
+      </section>
 
+      <section className="border-b border-rule pb-10">
         {/* A tese, dita antes de qualquer gráfico. */}
-        <div className="grid-ground mt-8 rounded-[var(--radius)] border border-rule bg-surface p-6">
+        <div className="card-surface mt-6 p-8">
+          <div className="data-ribbon mb-4" />
           <p className="eyebrow">O achado que abre o painel</p>
-          <p className="mt-2 max-w-3xl font-display text-2xl leading-snug text-ink">
+          <p className="mt-2 max-w-3xl font-display text-2xl leading-snug font-bold text-ink">
             {cruzou ? (
               <>
                 Em {formatMes(cruzou)}, o estoque de títulos de dívida emitidos por empresas
@@ -94,8 +111,11 @@ export default function Page() {
               (valorEm(mercCap, mes) ?? 0) / (valorEm(serie("creditoAmpliadoEmpresas"), mes) || 1),
             )}
             .{" "}
-            <Link className="underline underline-offset-4" href="/credito-e-desintermediacao">
-              Ver a página-tese
+            <Link
+              className="font-semibold text-brand-blue underline underline-offset-4 hover:opacity-80"
+              href="/credito-e-desintermediacao"
+            >
+              Veja
             </Link>
             .
           </p>
@@ -226,15 +246,18 @@ export default function Page() {
       </Secao>
 
       <Secao titulo="Por onde começar">
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {PAGINAS.slice(1).map((p) => (
             <li key={p.href}>
               <Link
                 href={p.href}
-                className="block h-full rounded-[var(--radius)] border border-rule bg-surface p-4 transition-colors hover:border-rule-strong"
+                className="nav-card group h-full p-6"
+                style={{ "--card-accent": SOTAQUES[p.href] } as CSSProperties}
               >
-                <span className="font-display text-lg font-medium text-ink">{p.rotulo}</span>
-                <span className="mt-1 block text-sm leading-snug text-ink-2">
+                <span className="font-display text-lg font-bold text-ink transition-colors group-hover:text-brand-blue">
+                  {p.rotulo}
+                </span>
+                <span className="mt-2 block text-sm leading-relaxed text-ink-2">
                   {DESTAQUES[p.href]}
                 </span>
               </Link>

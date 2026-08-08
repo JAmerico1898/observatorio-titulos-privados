@@ -49,14 +49,15 @@ export function ChartBlock({
       data-congelado={congelado ? "true" : undefined}
       className={
         congelado
-          ? "rounded-[var(--radius)] border border-frozen-rule bg-frozen-bg/40 p-5"
-          : "rounded-[var(--radius)] border border-rule bg-surface p-5"
+          ? "rounded-[var(--radius)] border border-frozen-rule bg-frozen-bg/60 p-6 shadow-sm"
+          : "card-surface p-6"
       }
     >
       <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
         <div className="min-w-0">
+          <div className="data-ribbon mb-3" />
           <span className="eyebrow">{fonte}</span>
-          <h3 className="font-display text-lg leading-tight font-medium text-ink">
+          <h3 className="font-display text-lg leading-tight font-bold text-ink">
             {titulo}
             {congeladoEm && (
               <span className="text-ink-3"> — encerrada em {formatData(congeladoEm)}</span>

@@ -38,7 +38,6 @@ export default function Page() {
   return (
     <>
       <Cabecalho
-        eyebrow="SGS 28189–28191, 28851–28852 · BCB"
         titulo="A dívida que a empresa emite"
         resumo="Quando a empresa se financia sem passar pelo banco, ela emite papel. Esta página separa os dois braços desse mercado — dívida direta e securitização — e mede o espaço que a dívida pública ocupa ao lado deles."
       />

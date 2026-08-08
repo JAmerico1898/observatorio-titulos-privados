@@ -56,7 +56,6 @@ export default function Page() {
   return (
     <>
       <Cabecalho
-        eyebrow="SGS 27805–27809 · BCB"
         titulo="De onde o banco tira o dinheiro"
         resumo="Todo empréstimo bancário precisa ser financiado. Esta página mede o estoque dos instrumentos que fazem esse funding — e mostra como a isenção de imposto de renda redesenhou a composição da captação na última década."
       />
