@@ -85,8 +85,7 @@ export default function Page() {
         {/* A tese, dita antes de qualquer gráfico. */}
         <div className="card-surface mt-6 p-8">
           <div className="data-ribbon mb-4" />
-          <p className="eyebrow">O achado que abre o painel</p>
-          <p className="mt-2 max-w-3xl font-display text-2xl leading-snug font-bold text-ink">
+          <p className="max-w-3xl font-display text-2xl leading-snug font-bold text-ink">
             {cruzou ? (
               <>
                 Em {formatMes(cruzou)}, o estoque de títulos de dívida emitidos por empresas

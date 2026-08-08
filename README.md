@@ -56,6 +56,19 @@ Todos os tokens vivem **uma única vez** em `src/app/globals.css`. O portão fal
 | `npm run backfill:cetip` | carga única B3/CETIP LCI e LCA (não roda no cron) |
 | `npm test` / `npm run test:e2e` | testes isolados |
 
+## Variáveis de ambiente
+
+O formulário de `/contato` (linkado no rodapé) posta em `/api/contact`, que encaminha a
+mensagem por Pushover. Exige, na Vercel:
+
+| Variável | Onde achar |
+|---|---|
+| `PUSHOVER_TOKEN` | token da aplicação — Pushover → Your Applications |
+| `PUSHOVER_USER` | user key da conta — topo do dashboard do Pushover |
+
+Sem elas o handler responde 500 e a UI mostra o estado de erro. Nenhuma outra parte do
+painel depende de variável de ambiente.
+
 ## Arquitetura de dados
 
 ```

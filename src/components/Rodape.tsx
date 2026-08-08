@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { meta } from "@/lib/dados";
 
 export function Rodape() {
@@ -14,7 +16,11 @@ export function Rodape() {
         </div>
         <div className="space-y-1 sm:text-right">
           <p>Dúvidas, erros, sugestões?</p>
-          <p>Entre em contato!</p>
+          <p>
+            <Link href="/contato" className="underline underline-offset-4 hover:no-underline">
+              Entre em contato!
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
