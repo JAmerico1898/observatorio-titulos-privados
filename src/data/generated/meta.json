@@ -1,11 +1,21 @@
 {
-  "processadoEm": "2026-08-07T22:34:00.544Z",
+  "processadoEm": "2026-08-10T10:12:20.392Z",
   "mesReferencia": "2026-06",
   "fontes": [
     {
       "nome": "BCB — SGS",
       "ultimoPeriodo": "2026-06",
       "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.28851/dados?formato=json"
+    },
+    {
+      "nome": "CVM — Informes mensais de FIDC",
+      "ultimoPeriodo": "2026-06",
+      "url": "https://dados.cvm.gov.br/dataset/fidc-doc-inf_mensal"
+    },
+    {
+      "nome": "B3/CETIP — acervo congelado (LCI e LCA)",
+      "ultimoPeriodo": "2025-12-11",
+      "url": "https://arquivos.b3.com.br"
     }
   ]
 }
