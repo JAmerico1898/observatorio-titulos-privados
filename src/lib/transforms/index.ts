@@ -167,6 +167,20 @@ export function subordinacao(plSubordinada: number, plTotal: number): number | n
   return plSubordinada / plTotal;
 }
 
+/**
+ * Descarta os meses finais ainda incompletos na CVM.
+ *
+ * A CVM publica o arquivo do mês assim que chegam os primeiros informes: em
+ * out/2026 o de setembro trazia 1.361 informes contra 4.400 em agosto, e
+ * publicado cru mostraria o PL da indústria caindo 83%. Um mês só entra
+ * quando tem ao menos `limiar` dos informes do mês anterior.
+ */
+export function cortarMesesParciais<T extends { fundos: number }>(meses: T[], limiar = 0.9): T[] {
+  let fim = meses.length;
+  while (fim > 1 && meses[fim - 1].fundos < limiar * meses[fim - 2].fundos) fim--;
+  return meses.slice(0, fim);
+}
+
 /* ------------------------------------------------------------------ *
  * Utilitários de série
  * ------------------------------------------------------------------ */

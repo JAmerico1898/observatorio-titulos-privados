@@ -6,7 +6,7 @@
  * que separa LCI de LCA — o SGS publica as duas somadas em "Letras de crédito"
  * (27807). Debêntures, CRI e CRA não existem neste acervo.
  *
- * Roda uma vez, localmente. O resultado é commitado e o cron semanal nunca
+ * Roda uma vez, localmente. O resultado é commitado e o `fetch-data` nunca
  * executa este script.
  *
  *   npm run backfill:cetip

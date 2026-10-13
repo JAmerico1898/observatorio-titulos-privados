@@ -1,15 +1,13 @@
-name: Dados (cron semanal)
+name: Dados (manual)
 
 # Pipeline de dados (spec §3.3). Roda `fetch-data`, que só grava se metadados e
 # valores-âncora conferirem, e commita apenas se algum número mudou.
 #
-# Os backfills (CVM e B3/CETIP) NÃO rodam aqui: são cargas únicas, versionadas.
+# Sem agendamento: a atualização de rotina é feita localmente
+# (`npm run fetch-data` + push). Este workflow fica como plano B, pelo botão
+# "Run workflow". O acervo B3/CETIP NÃO roda aqui: é carga única, versionada.
 
 on:
-  schedule:
-    # Segunda-feira, 09:00 UTC (06:00 em Brasília). Os saldos do BCB saem até
-    # quatro semanas após o mês de referência, então semanal é folgado.
-    - cron: "0 9 * * 1"
   workflow_dispatch:
 
 concurrency:
@@ -21,14 +19,14 @@ permissions:
 
 jobs:
   atualizar:
-    name: Atualizar séries do SGS
+    name: Atualizar SGS e FIDC
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm

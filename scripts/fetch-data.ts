@@ -1,20 +1,22 @@
 /**
- * Pipeline semanal (spec §3.3).
+ * Pipeline de dados (spec §3.3).
  *
- * Baixa as séries do SGS, valida schema e metadados, normaliza para R$ milhões
- * e grava `src/data/generated/sgs.json` + `meta.json`.
+ * Baixa as séries do SGS, valida schema e metadados, normaliza para R$ milhões,
+ * recarrega os informes de FIDC da CVM e grava `src/data/generated/sgs.json`,
+ * `fidc.json` e `meta.json`.
  *
  * Falha de qualquer fonte **aborta** — nunca grava dados parciais.
- * Os backfills (CVM e CETIP) não rodam aqui; são cargas únicas commitadas.
+ * O acervo da CETIP não roda aqui; é carga única commitada.
  */
 
 import { mkdir, writeFile, readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-import { SERIES, SGS_DADOS, TOLERANCIA_ANCORA } from "@/data/sources";
+import { FONTE_CVM_FIDC, SERIES, SGS_DADOS, TOLERANCIA_ANCORA } from "@/data/sources";
 import { zSgsBundle, zMeta, type SerieNomeada } from "@/lib/schemas";
 import { normalizar, valorEm, ultimo, truncar } from "@/lib/transforms";
 import { buscarSerieSGS, buscarMetadadosCkan } from "./lib/bcb";
+import { buscarFidc } from "./lib/fidc";
 
 const DEST = join(process.cwd(), "src", "data", "generated");
 
@@ -93,6 +95,9 @@ async function main() {
     .sort()[0];
   if (!mesReferencia) throw new Error("não foi possível determinar o mês de referência");
 
+  console.log("→ FIDC (CVM)");
+  const fidc = await buscarFidc();
+
   const meta = zMeta.parse({
     processadoEm: new Date().toISOString(),
     mesReferencia,
@@ -102,29 +107,25 @@ async function main() {
         ultimoPeriodo: mesReferencia,
         url: SGS_DADOS(28851),
       },
-      ...(await periodosDosBackfills()),
+      {
+        nome: FONTE_CVM_FIDC.nome,
+        ultimoPeriodo: fidc.meses.at(-1)!.mes,
+        url: FONTE_CVM_FIDC.portal,
+      },
+      ...(await periodoDaCetip()),
     ],
   });
 
   await mkdir(DEST, { recursive: true });
   await writeFile(join(DEST, "sgs.json"), JSON.stringify(bundle, null, 2) + "\n");
+  await writeFile(join(DEST, "fidc.json"), JSON.stringify(fidc, null, 2) + "\n");
   await writeFile(join(DEST, "meta.json"), JSON.stringify(meta, null, 2) + "\n");
-  console.log(`\n✓ ${saida.length} séries gravadas. Mês de referência: ${mesReferencia}`);
+  console.log(`\n✓ ${saida.length} séries e ${fidc.meses.length} meses de FIDC gravados. Referência: ${mesReferencia}`);
 }
 
-/** Lê os JSONs congelados só para registrar o período deles no meta.json. */
-async function periodosDosBackfills() {
+/** Lê o JSON congelado só para registrar o período dele no meta.json. */
+async function periodoDaCetip() {
   const fontes: Array<{ nome: string; ultimoPeriodo: string; url: string }> = [];
-  try {
-    const fidc = JSON.parse(await readFile(join(DEST, "fidc.json"), "utf8"));
-    fontes.push({
-      nome: "CVM — Informes mensais de FIDC",
-      ultimoPeriodo: fidc.meses.at(-1)?.mes ?? "—",
-      url: "https://dados.cvm.gov.br/dataset/fidc-doc-inf_mensal",
-    });
-  } catch {
-    console.warn("  ! fidc.json ainda não existe (rode npm run backfill:fidc)");
-  }
   try {
     const cetip = JSON.parse(await readFile(join(DEST, "cetip.json"), "utf8"));
     fontes.push({

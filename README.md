@@ -51,9 +51,8 @@ Todos os tokens vivem **uma única vez** em `src/app/globals.css`. O portão fal
 |---|---|
 | `npm run dev` | desenvolvimento |
 | `npm run verify` | **o portão inteiro**: typecheck, lint, testes com cobertura, build, e2e e evals |
-| `npm run fetch-data` | pipeline semanal (SGS + metadados + valor-âncora) |
-| `npm run backfill:fidc` | carga única CVM 2013→ (não roda no cron) |
-| `npm run backfill:cetip` | carga única B3/CETIP LCI e LCA (não roda no cron) |
+| `npm run fetch-data` | pipeline de dados: SGS (metadados + valor-âncora) e FIDC/CVM |
+| `npm run backfill:cetip` | carga única B3/CETIP LCI e LCA (fora do `fetch-data`) |
 | `npm test` / `npm run test:e2e` | testes isolados |
 
 ## Variáveis de ambiente
@@ -72,9 +71,9 @@ painel depende de variável de ambiente.
 ## Arquitetura de dados
 
 ```
-scripts/fetch-data.ts   →  src/data/generated/sgs.json + meta.json   (semanal, automático)
-scripts/backfill-*.ts   →  src/data/generated/fidc.json + cetip.json (uma vez, commitado)
-                        →  páginas estáticas geradas no build
+scripts/fetch-data.ts     →  src/data/generated/sgs.json + fidc.json + meta.json
+scripts/backfill-cetip.ts →  src/data/generated/cetip.json (uma vez, commitado)
+                          →  páginas estáticas geradas no build
 ```
 
 **Fontes** — todas sem autenticação:

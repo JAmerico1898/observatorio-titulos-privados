@@ -1,11 +1,9 @@
 /**
- * Carga **única** dos informes mensais de FIDC da CVM (spec §3.1 e §3.3).
+ * Carga dos informes mensais de FIDC da CVM (spec §3.1 e §3.3).
  *
  * Histórico 2013–2024 em ZIPs anuais + 2025 em diante em ZIPs mensais.
- * Roda uma vez, localmente; o resultado é commitado. O cron semanal não
- * executa este script.
- *
- *   npm run backfill:fidc
+ * Recarga completa a cada `npm run fetch-data`, e não incremental: a CVM
+ * aceita reapresentação de meses antigos e a carga inteira leva ~35 s.
  *
  * Duas armadilhas do formato da CVM, ambas tratadas aqui:
  *
@@ -19,14 +17,12 @@
  */
 
 import AdmZip from "adm-zip";
-import { mkdir, writeFile } from "node:fs/promises";
-import { join } from "node:path";
 
 import { FONTE_CVM_FIDC } from "@/data/sources";
-import { zFidc } from "@/lib/schemas";
-import { buscarComRetry } from "./lib/bcb";
+import { zFidc, type Fidc } from "@/lib/schemas";
+import { cortarMesesParciais } from "@/lib/transforms";
+import { buscarComRetry } from "./bcb";
 
-const DEST = join(process.cwd(), "src", "data", "generated");
 const ANOS_HISTORICOS = Array.from({ length: 12 }, (_, i) => String(2013 + i));
 
 /** Classes de recebível publicadas na Tab II (nível A..K). */
@@ -262,7 +258,8 @@ async function mesesCorrentes(): Promise<string[]> {
   return [...achados].sort();
 }
 
-async function main() {
+/** Baixa e agrega todos os informes. Não grava nada — quem grava é o `fetch-data`. */
+export async function buscarFidc(): Promise<Fidc> {
   const acc = new Map<string, Acumulado>();
 
   console.log("→ histórico anual (2013–2024)");
@@ -282,10 +279,16 @@ async function main() {
     console.log(`  ✓ ${aaaamm}`);
   }
 
-  const ordenados = [...acc.entries()].sort(([a], [b]) => a.localeCompare(b));
+  const todos = [...acc.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([mes, a]) => ({ mes, a, fundos: a.informes.size }));
+  const ordenados = cortarMesesParciais(todos);
+  for (const { mes, fundos } of todos.slice(ordenados.length)) {
+    console.log(`  ! ${mes} ainda parcial na CVM (${fundos} informes) — fora desta carga`);
+  }
   // R$ → R$ milhões, a unidade canônica do painel.
   const M = 1_000_000;
-  const dadosMeses = ordenados.map(([mes, a]) => {
+  const dadosMeses = ordenados.map(({ mes, a }) => {
     const sub = subordinacaoConciliada(a);
     return {
       mes,
@@ -306,7 +309,7 @@ async function main() {
   );
 
   const ultimo = ordenados.at(-1)!;
-  const classes = [...ultimo[1].classes.entries()]
+  const classes = [...ultimo.a.classes.entries()]
     .map(([rotulo, valor]) => ({ rotulo, valor: valor / M }))
     .filter((c) => c.valor > 0)
     .sort((a, b) => b.valor - a.valor);
@@ -328,7 +331,7 @@ async function main() {
   const dados = zFidc.parse({
     meses: dadosMeses,
     classesUltimoMes,
-    mesClasses: ultimo[0],
+    mesClasses: ultimo.mes,
     quebraSubordinacao: detectarQuebra(dadosMeses),
   });
   if (dados.quebraSubordinacao) {
@@ -338,9 +341,6 @@ async function main() {
     );
   }
 
-  await mkdir(DEST, { recursive: true });
-  await writeFile(join(DEST, "fidc.json"), JSON.stringify(dados, null, 2) + "\n");
-
   const u = dados.meses.at(-1)!;
   console.log(
     `\n✓ ${dados.meses.length} meses (${dados.meses[0].mes} → ${u.mes})\n` +
@@ -348,9 +348,6 @@ async function main() {
       `inadimplência ${((100 * u.creditosVencidos) / u.carteiraDireitosCreditorios).toFixed(2)}% · ` +
       `subordinação ${((100 * u.plSubordinada) / (u.plSenior + u.plSubordinada)).toFixed(1)}%`,
   );
+  return dados;
 }
 
-main().catch((e) => {
-  console.error("\n✗ backfill FIDC abortado:", e instanceof Error ? e.message : e);
-  process.exit(1);
-});

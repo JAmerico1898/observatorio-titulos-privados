@@ -51,8 +51,9 @@ export type SerieSGS = {
 export const SGS_DADOS = (codigo: number) =>
   `https://api.bcb.gov.br/dados/serie/bcdata.sgs.${codigo}/dados?formato=json`;
 
-export const CKAN_METADADOS = (codigo: number) =>
-  `https://dadosabertos.bcb.gov.br/api/3/action/package_search?fq=codigo_sgs:${codigo}&rows=5`;
+/** Uma consulta para todos os códigos: cada requisição a menos é uma chance a menos de recusa. */
+export const CKAN_METADADOS = (codigos: number[]) =>
+  `https://dadosabertos.bcb.gov.br/api/3/action/package_search?fq=codigo_sgs:(${codigos.join("%20OR%20")})&rows=${codigos.length * 3}`;
 
 /** Tolerância do valor-âncora: o BCB revisa saldos retroativamente. */
 export const TOLERANCIA_ANCORA = 0.02;
@@ -294,7 +295,7 @@ export const FONTE_CVM_FIDC = {
 /**
  * Acervo congelado de balcão, herdado da CETIP (spec §3.1).
  * Baixado **uma vez** por `scripts/backfill-cetip.ts` e commitado.
- * O pipeline semanal nunca toca aqui.
+ * O `fetch-data` nunca toca aqui.
  */
 export const FONTE_CETIP = {
   nome: "B3/CETIP — acervo histórico de renda fixa (UP2DATA)",

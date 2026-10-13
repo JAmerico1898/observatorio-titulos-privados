@@ -2,7 +2,7 @@
  * Acesso ao BCB. Código determinístico — sem LLM, sem heurística (spec §8, regra 5).
  */
 
-import { SGS_DADOS, CKAN_METADADOS, type SerieSGS } from "@/data/sources";
+import { SERIES, SGS_DADOS, CKAN_METADADOS, type SerieSGS } from "@/data/sources";
 import { zRespostaSGS } from "@/lib/schemas";
 import type { Serie } from "@/lib/transforms";
 
@@ -62,13 +62,38 @@ export type MetadadosCkan = {
   periodicidade: string | null;
 };
 
+type RegistroCkan = { codigo_sgs?: string; title?: string; notes?: string };
+
+/**
+ * Catálogo do CKAN para todas as séries de `sources.ts`, numa consulta só.
+ *
+ * O firewall do portal recusa boa parte das requisições (cerca de 70% em
+ * out/2026, em rajadas de até 18 seguidas, qualquer que seja a URL ou o
+ * user-agent) respondendo **HTTP 200 com uma página HTML** "Requisição
+ * Inválida". O status não denuncia a recusa, então o retry é pelo corpo: só
+ * vale a resposta que for JSON. A recusa volta em ~0,2 s e as rajadas duram
+ * dezenas de segundos — daí muitas tentativas com pausa curta e fixa.
+ */
+async function buscarCatalogoCkan(tentativas = 40): Promise<RegistroCkan[]> {
+  const url = CKAN_METADADOS(SERIES.map((s) => s.codigo));
+  for (let i = 0; i < tentativas; i++) {
+    const texto = await (await buscarComRetry(url)).text();
+    try {
+      const j = JSON.parse(texto) as { result?: { results?: RegistroCkan[] } };
+      return j.result?.results ?? [];
+    } catch {
+      if (i < tentativas - 1) await new Promise((res) => setTimeout(res, 3000));
+    }
+  }
+  throw new Error(`CKAN recusou ${tentativas} tentativas seguidas (HTML no lugar de JSON) em ${url}`);
+}
+
+let catalogoCkan: Promise<RegistroCkan[]> | undefined;
+
 /** Lê os metadados oficiais de uma série no CKAN de dados abertos do BCB. */
 export async function buscarMetadadosCkan(codigo: number): Promise<MetadadosCkan> {
-  const r = await buscarComRetry(CKAN_METADADOS(codigo));
-  const j = (await r.json()) as {
-    result?: { results?: Array<{ codigo_sgs?: string; title?: string; notes?: string }> };
-  };
-  const reg = (j.result?.results ?? []).find((x) => x.codigo_sgs === String(codigo));
+  catalogoCkan ??= buscarCatalogoCkan();
+  const reg = (await catalogoCkan).find((x) => x.codigo_sgs === String(codigo));
   if (!reg) return { encontrado: false, titulo: null, unidade: null, periodicidade: null };
   const notes = reg.notes ?? "";
   return {

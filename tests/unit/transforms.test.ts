@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  cortarMesesParciais,
   cruzamento,
   deltaPart12m,
   inadFIDC,
@@ -210,6 +211,26 @@ describe("indicadores de FIDC", () => {
     // atravessaria até virar "—" ou, pior, um gráfico vazio sem explicação.
     expect(inadFIDC(5, 0)).toBeNull();
     expect(subordinacao(5, 0)).toBeNull();
+  });
+
+  it("cortarMesesParciais descarta o fim da série enquanto faltarem informes", () => {
+    // Caso real de out/2026: setembro com 1.361 informes contra 4.400 em agosto.
+    const meses = [{ fundos: 4390 }, { fundos: 4400 }, { fundos: 1361 }];
+    expect(cortarMesesParciais(meses)).toEqual([{ fundos: 4390 }, { fundos: 4400 }]);
+    // Dois meses parciais seguidos caem juntos.
+    expect(cortarMesesParciais([{ fundos: 4400 }, { fundos: 3000 }, { fundos: 900 }])).toEqual([
+      { fundos: 4400 },
+    ]);
+  });
+
+  it("cortarMesesParciais preserva série completa e oscilação normal", () => {
+    const meses = [{ fundos: 4400 }, { fundos: 4390 }, { fundos: 4000 }];
+    expect(cortarMesesParciais(meses)).toEqual(meses);
+    // Só o fim é examinado: um buraco antigo é história, não mês parcial.
+    const comBuraco = [{ fundos: 100 }, { fundos: 10 }, { fundos: 100 }];
+    expect(cortarMesesParciais(comBuraco)).toEqual(comBuraco);
+    expect(cortarMesesParciais([{ fundos: 5 }])).toEqual([{ fundos: 5 }]);
+    expect(cortarMesesParciais([])).toEqual([]);
   });
 });
 

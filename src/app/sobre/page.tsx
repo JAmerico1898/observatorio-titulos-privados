@@ -115,14 +115,14 @@ export default function Page() {
                 dados.cvm.gov.br
               </a>
               . Cobertura atual: {formatMes(fidc.meses[0].mes)} a {formatMes(fidc.meses.at(-1)!.mes)}.
-              Carga única, versionada no repositório; o pipeline semanal não a reexecuta.
+              Recarregada por inteiro a cada atualização; o mês mais recente só entra quando a CVM já recebeu a maior parte dos informes.
             </p>
           </NotaTecnica>
           <NotaTecnica titulo="B3/CETIP — acervo congelado">
             <p>
               {FONTE_CETIP.nome}. Apenas os arquivos de estoque de LCI e LCA, para a decomposição
               que o SGS publica somada. Série encerrada em {formatData(cetip.dataCorte)}, com
-              valores arredondados na origem. Carga única, versionada, fora do pipeline semanal.
+              valores arredondados na origem. Carga única, versionada, fora do pipeline de atualização.
             </p>
           </NotaTecnica>
         </div>
