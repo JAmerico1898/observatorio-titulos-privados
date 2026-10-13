@@ -1,5 +1,5 @@
 {
-  "processadoEm": "2026-10-05T17:41:14.119Z",
+  "processadoEm": "2026-10-13T15:06:28.993Z",
   "mesReferencia": "2026-08",
   "fontes": [
     {
@@ -9,7 +9,7 @@
     },
     {
       "nome": "CVM — Informes mensais de FIDC",
-      "ultimoPeriodo": "2026-06",
+      "ultimoPeriodo": "2026-08",
       "url": "https://dados.cvm.gov.br/dataset/fidc-doc-inf_mensal"
     },
     {

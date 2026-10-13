@@ -2,7 +2,7 @@
   "meses": [
     {
       "mes": "2013-01",
-      "fundos": 412,
+      "fundos": 405,
       "plTotal": 69051.99081647999,
       "carteiraDireitosCreditorios": 58583.34630775998,
       "creditosVencidos": 7485.101654349999,
@@ -12,7 +12,7 @@
     },
     {
       "mes": "2013-02",
-      "fundos": 414,
+      "fundos": 406,
       "plTotal": 70227.44513446008,
       "carteiraDireitosCreditorios": 57168.41151587001,
       "creditosVencidos": 7678.90288433,
@@ -22,7 +22,7 @@
     },
     {
       "mes": "2013-03",
-      "fundos": 417,
+      "fundos": 408,
       "plTotal": 68290.02362568004,
       "carteiraDireitosCreditorios": 58784.87481399,
       "creditosVencidos": 7302.809869889999,
@@ -32,7 +32,7 @@
     },
     {
       "mes": "2013-04",
-      "fundos": 419,
+      "fundos": 405,
       "plTotal": 70202.43131989,
       "carteiraDireitosCreditorios": 58057.67078828,
       "creditosVencidos": 7255.500679030001,
@@ -42,7 +42,7 @@
     },
     {
       "mes": "2013-05",
-      "fundos": 417,
+      "fundos": 409,
       "plTotal": 82130.41463210993,
       "carteiraDireitosCreditorios": 63303.548555379966,
       "creditosVencidos": 7416.524547350001,
@@ -52,7 +52,7 @@
     },
     {
       "mes": "2013-06",
-      "fundos": 415,
+      "fundos": 405,
       "plTotal": 93007.24001990992,
       "carteiraDireitosCreditorios": 65631.77749599998,
       "creditosVencidos": 7266.984842589999,
@@ -62,7 +62,7 @@
     },
     {
       "mes": "2013-07",
-      "fundos": 420,
+      "fundos": 406,
       "plTotal": 89145.11773389012,
       "carteiraDireitosCreditorios": 71856.13226867006,
       "creditosVencidos": 6956.433348820001,
@@ -72,7 +72,7 @@
     },
     {
       "mes": "2013-08",
-      "fundos": 420,
+      "fundos": 410,
       "plTotal": 83521.23256905009,
       "carteiraDireitosCreditorios": 72031.12854423,
       "creditosVencidos": 6716.9535381099995,
@@ -82,7 +82,7 @@
     },
     {
       "mes": "2013-09",
-      "fundos": 419,
+      "fundos": 412,
       "plTotal": 81739.65138716005,
       "carteiraDireitosCreditorios": 71044.83941866002,
       "creditosVencidos": 6992.26493914,
@@ -92,7 +92,7 @@
     },
     {
       "mes": "2013-10",
-      "fundos": 428,
+      "fundos": 420,
       "plTotal": 78563.68249229007,
       "carteiraDireitosCreditorios": 67492.53323595005,
       "creditosVencidos": 7006.695138720001,
@@ -102,7 +102,7 @@
     },
     {
       "mes": "2013-11",
-      "fundos": 430,
+      "fundos": 423,
       "plTotal": 83088.91775110005,
       "carteiraDireitosCreditorios": 71914.51145244004,
       "creditosVencidos": 6147.930522220002,
@@ -112,7 +112,7 @@
     },
     {
       "mes": "2013-12",
-      "fundos": 430,
+      "fundos": 419,
       "plTotal": 84521.49914936995,
       "carteiraDireitosCreditorios": 71271.28634585,
       "creditosVencidos": 6298.68098153,
@@ -122,7 +122,7 @@
     },
     {
       "mes": "2014-01",
-      "fundos": 431,
+      "fundos": 420,
       "plTotal": 85879.78609691,
       "carteiraDireitosCreditorios": 67414.72989655,
       "creditosVencidos": 4990.5122816,
@@ -132,7 +132,7 @@
     },
     {
       "mes": "2014-02",
-      "fundos": 430,
+      "fundos": 422,
       "plTotal": 80087.06397050004,
       "carteiraDireitosCreditorios": 69263.52241129,
       "creditosVencidos": 4984.99673736,
@@ -142,7 +142,7 @@
     },
     {
       "mes": "2014-03",
-      "fundos": 435,
+      "fundos": 423,
       "plTotal": 82014.38067428011,
       "carteiraDireitosCreditorios": 68822.70300867998,
       "creditosVencidos": 5160.394962980002,
@@ -152,7 +152,7 @@
     },
     {
       "mes": "2014-04",
-      "fundos": 436,
+      "fundos": 428,
       "plTotal": 76184.89266551998,
       "carteiraDireitosCreditorios": 64015.48155371004,
       "creditosVencidos": 5209.713184810002,
@@ -162,7 +162,7 @@
     },
     {
       "mes": "2014-05",
-      "fundos": 446,
+      "fundos": 438,
       "plTotal": 77473.74486019004,
       "carteiraDireitosCreditorios": 73029.58721040002,
       "creditosVencidos": 4994.400357979997,
@@ -172,7 +172,7 @@
     },
     {
       "mes": "2014-06",
-      "fundos": 456,
+      "fundos": 449,
       "plTotal": 75001.52477792006,
       "carteiraDireitosCreditorios": 69910.95166692995,
       "creditosVencidos": 4988.1997286000005,
@@ -182,7 +182,7 @@
     },
     {
       "mes": "2014-07",
-      "fundos": 458,
+      "fundos": 452,
       "plTotal": 76810.17117971998,
       "carteiraDireitosCreditorios": 71592.62931610997,
       "creditosVencidos": 4438.17055909,
@@ -192,7 +192,7 @@
     },
     {
       "mes": "2014-08",
-      "fundos": 462,
+      "fundos": 454,
       "plTotal": 73475.35485392985,
       "carteiraDireitosCreditorios": 68215.36433757999,
       "creditosVencidos": 4047.307024909999,
@@ -202,7 +202,7 @@
     },
     {
       "mes": "2014-09",
-      "fundos": 466,
+      "fundos": 458,
       "plTotal": 74749.16341331,
       "carteiraDireitosCreditorios": 58989.32493165998,
       "creditosVencidos": 3917.37950495,
@@ -212,7 +212,7 @@
     },
     {
       "mes": "2014-10",
-      "fundos": 465,
+      "fundos": 457,
       "plTotal": 76769.74261739002,
       "carteiraDireitosCreditorios": 61685.749317929985,
       "creditosVencidos": 3524.2358055199993,
@@ -222,7 +222,7 @@
     },
     {
       "mes": "2014-11",
-      "fundos": 472,
+      "fundos": 468,
       "plTotal": 75955.10099047993,
       "carteiraDireitosCreditorios": 61441.74476189,
       "creditosVencidos": 3478.41340202,
@@ -232,7 +232,7 @@
     },
     {
       "mes": "2014-12",
-      "fundos": 477,
+      "fundos": 472,
       "plTotal": 76464.23706146996,
       "carteiraDireitosCreditorios": 64082.04071825,
       "creditosVencidos": 4051.715033929999,
@@ -242,7 +242,7 @@
     },
     {
       "mes": "2015-01",
-      "fundos": 476,
+      "fundos": 471,
       "plTotal": 71989.01073087001,
       "carteiraDireitosCreditorios": 58044.440768679975,
       "creditosVencidos": 3939.8429016199993,
@@ -252,7 +252,7 @@
     },
     {
       "mes": "2015-02",
-      "fundos": 482,
+      "fundos": 473,
       "plTotal": 72980.94961587997,
       "carteiraDireitosCreditorios": 59421.568505649986,
       "creditosVencidos": 3034.20606168,
@@ -262,7 +262,7 @@
     },
     {
       "mes": "2015-03",
-      "fundos": 488,
+      "fundos": 480,
       "plTotal": 73541.90532728,
       "carteiraDireitosCreditorios": 43766.958976439935,
       "creditosVencidos": 2769.0381425499995,
@@ -272,7 +272,7 @@
     },
     {
       "mes": "2015-04",
-      "fundos": 488,
+      "fundos": 481,
       "plTotal": 77509.19777327984,
       "carteiraDireitosCreditorios": 42420.35646418007,
       "creditosVencidos": 2417.66668508,
@@ -282,7 +282,7 @@
     },
     {
       "mes": "2015-05",
-      "fundos": 494,
+      "fundos": 487,
       "plTotal": 75124.66970416006,
       "carteiraDireitosCreditorios": 61040.57649395003,
       "creditosVencidos": 2865.6690357800003,
@@ -292,7 +292,7 @@
     },
     {
       "mes": "2015-06",
-      "fundos": 504,
+      "fundos": 498,
       "plTotal": 78975.22201968996,
       "carteiraDireitosCreditorios": 63745.15661581994,
       "creditosVencidos": 2789.46157311,
@@ -302,7 +302,7 @@
     },
     {
       "mes": "2015-07",
-      "fundos": 509,
+      "fundos": 500,
       "plTotal": 77675.11219825005,
       "carteiraDireitosCreditorios": 62586.632023909995,
       "creditosVencidos": 3116.4401060699997,
@@ -312,7 +312,7 @@
     },
     {
       "mes": "2015-08",
-      "fundos": 498,
+      "fundos": 489,
       "plTotal": 79218.77147027,
       "carteiraDireitosCreditorios": 62057.072600259984,
       "creditosVencidos": 2832.4727357099996,
@@ -322,7 +322,7 @@
     },
     {
       "mes": "2015-09",
-      "fundos": 516,
+      "fundos": 507,
       "plTotal": 84554.67117661,
       "carteiraDireitosCreditorios": 64788.560474299986,
       "creditosVencidos": 2908.61004052,
@@ -332,7 +332,7 @@
     },
     {
       "mes": "2015-10",
-      "fundos": 520,
+      "fundos": 511,
       "plTotal": 79922.85285986005,
       "carteiraDireitosCreditorios": 66409.77981292999,
       "creditosVencidos": 3002.4702695999995,
@@ -342,7 +342,7 @@
     },
     {
       "mes": "2015-11",
-      "fundos": 519,
+      "fundos": 512,
       "plTotal": 84169.05019816986,
       "carteiraDireitosCreditorios": 65892.0139785199,
       "creditosVencidos": 3356.216336860002,
@@ -352,7 +352,7 @@
     },
     {
       "mes": "2015-12",
-      "fundos": 527,
+      "fundos": 519,
       "plTotal": 84691.00157442008,
       "carteiraDireitosCreditorios": 70860.95119409995,
       "creditosVencidos": 3397.6349316999986,
@@ -362,7 +362,7 @@
     },
     {
       "mes": "2016-01",
-      "fundos": 526,
+      "fundos": 513,
       "plTotal": 84317.94702203012,
       "carteiraDireitosCreditorios": 72385.57980089012,
       "creditosVencidos": 3261.3293969200004,
@@ -372,7 +372,7 @@
     },
     {
       "mes": "2016-02",
-      "fundos": 525,
+      "fundos": 515,
       "plTotal": 83826.90774044005,
       "carteiraDireitosCreditorios": 68185.14139906997,
       "creditosVencidos": 2808.5742267899986,
@@ -382,7 +382,7 @@
     },
     {
       "mes": "2016-03",
-      "fundos": 530,
+      "fundos": 521,
       "plTotal": 81227.65032721007,
       "carteiraDireitosCreditorios": 66097.71067167004,
       "creditosVencidos": 3264.0477636099995,
@@ -392,7 +392,7 @@
     },
     {
       "mes": "2016-04",
-      "fundos": 534,
+      "fundos": 525,
       "plTotal": 82584.8708885601,
       "carteiraDireitosCreditorios": 67780.77835935002,
       "creditosVencidos": 3547.9784034299996,
@@ -402,7 +402,7 @@
     },
     {
       "mes": "2016-05",
-      "fundos": 542,
+      "fundos": 531,
       "plTotal": 181792.29642467998,
       "carteiraDireitosCreditorios": 167771.1062835899,
       "creditosVencidos": 3617.7712091500007,
@@ -412,7 +412,7 @@
     },
     {
       "mes": "2016-06",
-      "fundos": 548,
+      "fundos": 537,
       "plTotal": 78647.49013151998,
       "carteiraDireitosCreditorios": 67097.40221587998,
       "creditosVencidos": 3230.337245999999,
@@ -422,7 +422,7 @@
     },
     {
       "mes": "2016-07",
-      "fundos": 552,
+      "fundos": 542,
       "plTotal": 83485.61297306012,
       "carteiraDireitosCreditorios": 69899.90430763995,
       "creditosVencidos": 3346.4735078400013,
@@ -432,7 +432,7 @@
     },
     {
       "mes": "2016-08",
-      "fundos": 560,
+      "fundos": 549,
       "plTotal": 86638.29315279998,
       "carteiraDireitosCreditorios": 70468.2716596599,
       "creditosVencidos": 3295.8828239900017,
@@ -442,7 +442,7 @@
     },
     {
       "mes": "2016-09",
-      "fundos": 561,
+      "fundos": 551,
       "plTotal": 87258.62221020999,
       "carteiraDireitosCreditorios": 70594.44730146989,
       "creditosVencidos": 2902.390729239999,
@@ -452,7 +452,7 @@
     },
     {
       "mes": "2016-10",
-      "fundos": 566,
+      "fundos": 556,
       "plTotal": 86906.40786681004,
       "carteiraDireitosCreditorios": 75507.20089700997,
       "creditosVencidos": 3518.8874491699994,
@@ -462,7 +462,7 @@
     },
     {
       "mes": "2016-11",
-      "fundos": 567,
+      "fundos": 557,
       "plTotal": 89129.31101868993,
       "carteiraDireitosCreditorios": 78124.31031434995,
       "creditosVencidos": 3434.3104168599993,
@@ -472,7 +472,7 @@
     },
     {
       "mes": "2016-12",
-      "fundos": 575,
+      "fundos": 565,
       "plTotal": 93803.24158705004,
       "carteiraDireitosCreditorios": 82190.72983999997,
       "creditosVencidos": 3127.056651560001,
@@ -482,7 +482,7 @@
     },
     {
       "mes": "2017-01",
-      "fundos": 586,
+      "fundos": 577,
       "plTotal": 89372.04893982003,
       "carteiraDireitosCreditorios": 78256.82590048,
       "creditosVencidos": 3522.6509496400026,
@@ -492,7 +492,7 @@
     },
     {
       "mes": "2017-02",
-      "fundos": 594,
+      "fundos": 583,
       "plTotal": 91877.60371775003,
       "carteiraDireitosCreditorios": 81322.27463098012,
       "creditosVencidos": 4984.053959630002,
@@ -502,17 +502,17 @@
     },
     {
       "mes": "2017-03",
-      "fundos": 603,
-      "plTotal": 94200.16888035009,
+      "fundos": 592,
+      "plTotal": 94200.45518452008,
       "carteiraDireitosCreditorios": 75118.46237646011,
       "creditosVencidos": 3381.4752766000006,
-      "plSenior": 63231.21846967185,
-      "plSubordinada": 21089.71252463998,
-      "cobertura": 0.8953396778648812
+      "plSenior": 63231.218331654636,
+      "plSubordinada": 21089.99882880998,
+      "cobertura": 0.8953399959598055
     },
     {
       "mes": "2017-04",
-      "fundos": 612,
+      "fundos": 595,
       "plTotal": 90732.80039403007,
       "carteiraDireitosCreditorios": 79506.67122310006,
       "creditosVencidos": 5189.559811770002,
@@ -522,7 +522,7 @@
     },
     {
       "mes": "2017-05",
-      "fundos": 620,
+      "fundos": 604,
       "plTotal": 88161.10669067006,
       "carteiraDireitosCreditorios": 75083.46355761997,
       "creditosVencidos": 3293.4610670599996,
@@ -532,7 +532,7 @@
     },
     {
       "mes": "2017-06",
-      "fundos": 626,
+      "fundos": 605,
       "plTotal": 90538.10392423003,
       "carteiraDireitosCreditorios": 78869.04060935994,
       "creditosVencidos": 2852.609081119999,
@@ -542,7 +542,7 @@
     },
     {
       "mes": "2017-07",
-      "fundos": 630,
+      "fundos": 614,
       "plTotal": 94518.71198458994,
       "carteiraDireitosCreditorios": 74826.76222956998,
       "creditosVencidos": 3163.6655199200004,
@@ -552,7 +552,7 @@
     },
     {
       "mes": "2017-08",
-      "fundos": 642,
+      "fundos": 628,
       "plTotal": 102852.72443856989,
       "carteiraDireitosCreditorios": 79045.14553777006,
       "creditosVencidos": 2757.382428919999,
@@ -562,17 +562,17 @@
     },
     {
       "mes": "2017-09",
-      "fundos": 656,
-      "plTotal": 99494.44828689998,
-      "carteiraDireitosCreditorios": 79936.26620391998,
+      "fundos": 643,
+      "plTotal": 99498.05658707998,
+      "carteiraDireitosCreditorios": 79939.79666086998,
       "creditosVencidos": 4682.4042020199995,
       "plSenior": 72650.0092554755,
-      "plSubordinada": 25380.49841387002,
-      "cobertura": 0.985469329037926
+      "plSubordinada": 25384.10671405002,
+      "cobertura": 0.9854698559931696
     },
     {
       "mes": "2017-10",
-      "fundos": 672,
+      "fundos": 650,
       "plTotal": 93431.29922066985,
       "carteiraDireitosCreditorios": 78743.90296667002,
       "creditosVencidos": 2760.553409029998,
@@ -582,143 +582,143 @@
     },
     {
       "mes": "2017-11",
-      "fundos": 694,
+      "fundos": 675,
       "plTotal": 96193.32510066997,
       "carteiraDireitosCreditorios": 82647.67593323004,
       "creditosVencidos": 2780.133274899999,
-      "plSenior": 66413.61416809949,
+      "plSenior": 66413.61418022106,
       "plSubordinada": 28747.24349724,
       "cobertura": 0.989169096365162
     },
     {
       "mes": "2017-12",
-      "fundos": 750,
-      "plTotal": 115270.95737022015,
-      "carteiraDireitosCreditorios": 95753.52406851003,
+      "fundos": 735,
+      "plTotal": 115284.13519452015,
+      "carteiraDireitosCreditorios": 95758.19378855004,
       "creditosVencidos": 2912.889592619999,
-      "plSenior": 81401.71005030161,
+      "plSenior": 81415.13334062793,
       "plSubordinada": 32285.417396469995,
-      "cobertura": 0.9862371113720803
+      "cobertura": 0.9862386845714446
     },
     {
       "mes": "2018-01",
-      "fundos": 752,
+      "fundos": 729,
       "plTotal": 116072.74531886008,
       "carteiraDireitosCreditorios": 94483.16806031993,
       "creditosVencidos": 2299.802135470001,
-      "plSenior": 76906.8239289898,
-      "plSubordinada": 38326.35529345176,
+      "plSenior": 76906.82408498475,
+      "plSubordinada": 38326.35529801796,
       "cobertura": 0.9927951418972415
     },
     {
       "mes": "2018-02",
-      "fundos": 766,
+      "fundos": 743,
       "plTotal": 113869.57863335995,
       "carteiraDireitosCreditorios": 91920.23135606002,
       "creditosVencidos": 3086.7856200899973,
-      "plSenior": 75116.90886452021,
-      "plSubordinada": 36657.03120979604,
+      "plSenior": 75116.90884515837,
+      "plSubordinada": 36657.03123341808,
       "cobertura": 0.9818225579775384
     },
     {
       "mes": "2018-03",
-      "fundos": 785,
-      "plTotal": 118032.92345044002,
-      "carteiraDireitosCreditorios": 96892.15904448995,
+      "fundos": 764,
+      "plTotal": 118063.07095813,
+      "carteiraDireitosCreditorios": 96902.57233391995,
       "creditosVencidos": 2699.3178556300004,
-      "plSenior": 74221.59064635518,
-      "plSubordinada": 40133.07254077325,
-      "cobertura": 0.9690285223944746
+      "plSenior": 74224.13029110193,
+      "plSubordinada": 40160.68040640667,
+      "cobertura": 0.9690364309881756
     },
     {
       "mes": "2018-04",
-      "fundos": 798,
+      "fundos": 772,
       "plTotal": 125733.36748725013,
       "carteiraDireitosCreditorios": 98309.84568234996,
       "creditosVencidos": 4576.628376070002,
-      "plSenior": 81668.16188340086,
-      "plSubordinada": 40778.44261241241,
+      "plSenior": 81668.16196127239,
+      "plSubordinada": 40778.44260454197,
       "cobertura": 0.973782922990555
     },
     {
       "mes": "2018-05",
-      "fundos": 821,
+      "fundos": 794,
       "plTotal": 120000.46311329018,
       "carteiraDireitosCreditorios": 90198.48138609988,
       "creditosVencidos": 4491.893786440002,
-      "plSenior": 75454.84449169201,
-      "plSubordinada": 42054.13976956376,
+      "plSenior": 75454.84450557444,
+      "plSubordinada": 42054.13981873139,
       "cobertura": 0.9793443178660911
     },
     {
       "mes": "2018-06",
-      "fundos": 824,
-      "plTotal": 126115.56048171013,
-      "carteiraDireitosCreditorios": 95058.28159616,
+      "fundos": 807,
+      "plTotal": 126188.23373582013,
+      "carteiraDireitosCreditorios": 95107.95632787001,
       "creditosVencidos": 3979.7725354799995,
-      "plSenior": 81139.12000159445,
-      "plSubordinada": 42186.91265635591,
-      "cobertura": 0.9777292699305146
+      "plSenior": 81146.88858609025,
+      "plSubordinada": 42256.91453807899,
+      "cobertura": 0.9777824895399562
     },
     {
       "mes": "2018-07",
-      "fundos": 834,
-      "plTotal": 127858.30498601992,
+      "fundos": 815,
+      "plTotal": 127682.95827749993,
       "carteiraDireitosCreditorios": 96351.48561047002,
       "creditosVencidos": 4319.818887329999,
-      "plSenior": 79413.56766475643,
-      "plSubordinada": 45596.65531475407,
-      "cobertura": 0.9779847972913628
+      "plSenior": 79418.70692684318,
+      "plSubordinada": 45422.60041615954,
+      "cobertura": 0.9779947847267643
     },
     {
       "mes": "2018-08",
-      "fundos": 846,
-      "plTotal": 128543.40926628002,
+      "fundos": 830,
+      "plTotal": 128364.24986206002,
       "carteiraDireitosCreditorios": 97760.09245421998,
       "creditosVencidos": 4451.12104155,
-      "plSenior": 77946.94651266454,
-      "plSubordinada": 45554.36036878234,
-      "cobertura": 0.9606505904496275
+      "plSenior": 77946.89933559408,
+      "plSubordinada": 45376.49356552844,
+      "cobertura": 0.9605956700432134
     },
     {
       "mes": "2018-09",
-      "fundos": 857,
-      "plTotal": 130546.00295282998,
-      "carteiraDireitosCreditorios": 101386.38583875996,
+      "fundos": 840,
+      "plTotal": 130368.98160545998,
+      "carteiraDireitosCreditorios": 101387.95687931996,
       "creditosVencidos": 4504.570585290001,
-      "plSenior": 79026.38866171628,
-      "plSubordinada": 46236.94799398532,
-      "cobertura": 0.9591866676525885
+      "plSenior": 79022.38300982925,
+      "plSubordinada": 46066.52733097924,
+      "cobertura": 0.9591425684143955
     },
     {
       "mes": "2018-10",
-      "fundos": 868,
-      "plTotal": 133970.11926328004,
-      "carteiraDireitosCreditorios": 100801.36844116014,
+      "fundos": 857,
+      "plTotal": 133806.07079534006,
+      "carteiraDireitosCreditorios": 100820.75937744015,
       "creditosVencidos": 4401.695126440002,
-      "plSenior": 80900.92082636231,
-      "plSubordinada": 45298.54765948677,
-      "cobertura": 0.9417964395658549
+      "plSenior": 80893.57992844451,
+      "plSubordinada": 45281.7482153295,
+      "cobertura": 0.9427643046530093
     },
     {
       "mes": "2018-11",
-      "fundos": 882,
-      "plTotal": 136339.19082023,
-      "carteiraDireitosCreditorios": 104322.75336326995,
+      "fundos": 864,
+      "plTotal": 136224.33497878,
+      "carteiraDireitosCreditorios": 104280.51761043994,
       "creditosVencidos": 4860.878742399998,
-      "plSenior": 79947.1505242372,
-      "plSubordinada": 50861.4735539134,
-      "cobertura": 0.9595773487424702
+      "plSenior": 79822.93036305826,
+      "plSubordinada": 50868.302990598655,
+      "cobertura": 0.9595162803356754
     },
     {
       "mes": "2018-12",
-      "fundos": 890,
-      "plTotal": 141570.22729200995,
-      "carteiraDireitosCreditorios": 106120.68752540003,
+      "fundos": 869,
+      "plTotal": 141722.58422730994,
+      "carteiraDireitosCreditorios": 106482.25836020002,
       "creditosVencidos": 4616.669212699997,
-      "plSenior": 84281.55135191954,
-      "plSubordinada": 49592.37150976042,
-      "cobertura": 0.9456405595140676
+      "plSenior": 84281.09803887438,
+      "plSubordinada": 49984.35527186117,
+      "cobertura": 0.9473897986970722
     },
     {
       "mes": "2019-01",
@@ -1022,23 +1022,23 @@
     },
     {
       "mes": "2021-07",
-      "fundos": 1383,
-      "plTotal": 291917.47711508005,
-      "carteiraDireitosCreditorios": 208501.16245984,
+      "fundos": 1385,
+      "plTotal": 291992.8232062201,
+      "carteiraDireitosCreditorios": 208534.50245984,
       "creditosVencidos": 9890.829317229995,
       "plSenior": 179971.56588515575,
-      "plSubordinada": 110839.01683667653,
-      "cobertura": 0.9962753280313483
+      "plSubordinada": 110914.36292781627,
+      "cobertura": 0.9962762891490583
     },
     {
       "mes": "2021-08",
-      "fundos": 1424,
-      "plTotal": 297461.5842637399,
-      "carteiraDireitosCreditorios": 220200.59741741003,
+      "fundos": 1426,
+      "plTotal": 297540.5003811498,
+      "carteiraDireitosCreditorios": 220245.15997050004,
       "creditosVencidos": 10685.59324521999,
       "plSenior": 155302.90412251293,
-      "plSubordinada": 112523.87101883501,
-      "cobertura": 0.9005649821053706
+      "plSubordinada": 112602.78713624833,
+      "cobertura": 0.9005913550715274
     },
     {
       "mes": "2021-09",
@@ -1062,13 +1062,13 @@
     },
     {
       "mes": "2021-11",
-      "fundos": 1493,
-      "plTotal": 330582.0773538908,
-      "carteiraDireitosCreditorios": 245420.04584662005,
+      "fundos": 1494,
+      "plTotal": 330601.6790721908,
+      "carteiraDireitosCreditorios": 245438.17628398005,
       "creditosVencidos": 9401.413784849992,
       "plSenior": 201314.88642109855,
-      "plSubordinada": 116344.99436621784,
-      "cobertura": 0.9611444541128296
+      "plSubordinada": 116364.5960845452,
+      "cobertura": 0.9611467578986634
     },
     {
       "mes": "2021-12",
@@ -1083,12 +1083,12 @@
     {
       "mes": "2022-01",
       "fundos": 1553,
-      "plTotal": 307117.65646577015,
-      "carteiraDireitosCreditorios": 248722.63103002994,
+      "plTotal": 306616.6955679201,
+      "carteiraDireitosCreditorios": 248552.44710328992,
       "creditosVencidos": 10867.19923332001,
-      "plSenior": 170267.6992465909,
-      "plSubordinada": 120627.89888566438,
-      "cobertura": 0.9475403159678463
+      "plSenior": 170043.6759837289,
+      "plSubordinada": 120351.11034518133,
+      "cobertura": 0.9474549520141151
     },
     {
       "mes": "2022-02",
@@ -1103,42 +1103,42 @@
     {
       "mes": "2022-03",
       "fundos": 1607,
-      "plTotal": 327621.38926147955,
-      "carteiraDireitosCreditorios": 249841.98496693018,
+      "plTotal": 326991.9459057795,
+      "carteiraDireitosCreditorios": 249625.94746536016,
       "creditosVencidos": 10645.087357970004,
-      "plSenior": 178591.07154029,
-      "plSubordinada": 122319.69043862245,
-      "cobertura": 0.9185235106930235
+      "plSenior": 178347.49406537,
+      "plSubordinada": 121988.66270530225,
+      "cobertura": 0.9185343769098967
     },
     {
       "mes": "2022-04",
       "fundos": 1646,
-      "plTotal": 382699.7220646099,
-      "carteiraDireitosCreditorios": 280600.9628208202,
+      "plTotal": 381919.59254374984,
+      "carteiraDireitosCreditorios": 280308.0974853902,
       "creditosVencidos": 11031.137296379984,
-      "plSenior": 228892.34816081772,
-      "plSubordinada": 117194.41596196103,
-      "cobertura": 0.9043819722599846
+      "plSenior": 228626.12857593922,
+      "plSubordinada": 116680.50765337482,
+      "cobertura": 0.9041866577288039
     },
     {
       "mes": "2022-05",
       "fundos": 1665,
-      "plTotal": 367886.9620522903,
-      "carteiraDireitosCreditorios": 276274.75644982996,
+      "plTotal": 367125.0604109604,
+      "carteiraDireitosCreditorios": 275985.43303533,
       "creditosVencidos": 11387.38719040999,
-      "plSenior": 211527.99917177108,
-      "plSubordinada": 125652.13102105823,
-      "cobertura": 0.9167436109610024
+      "plSenior": 211259.01475709205,
+      "plSubordinada": 125159.36336839334,
+      "cobertura": 0.9165708273885896
     },
     {
       "mes": "2022-06",
       "fundos": 1700,
-      "plTotal": 364276.35806079913,
-      "carteiraDireitosCreditorios": 276875.09078764974,
+      "plTotal": 363442.8587297592,
+      "carteiraDireitosCreditorios": 276583.42928569973,
       "creditosVencidos": 12198.00395722002,
-      "plSenior": 219557.5226105983,
-      "plSubordinada": 138609.41641048272,
-      "cobertura": 0.9833014638342668
+      "plSenior": 219304.7213902601,
+      "plSubordinada": 138087.26044928265,
+      "cobertura": 0.9834242449804212
     },
     {
       "mes": "2022-07",
@@ -1153,12 +1153,12 @@
     {
       "mes": "2022-08",
       "fundos": 1767,
-      "plTotal": 339295.0121870401,
+      "plTotal": 339340.6591806601,
       "carteiraDireitosCreditorios": 278591.56954047974,
       "creditosVencidos": 12154.569014690007,
-      "plSenior": 183141.3028894117,
-      "plSubordinada": 143418.52999918011,
-      "cobertura": 0.9625577791846331
+      "plSenior": 183170.39143651447,
+      "plSubordinada": 143455.4195998366,
+      "cobertura": 0.9626232249765058
     },
     {
       "mes": "2022-09",
@@ -1173,22 +1173,22 @@
     {
       "mes": "2022-10",
       "fundos": 1824,
-      "plTotal": 350474.159529499,
-      "carteiraDireitosCreditorios": 280955.66216259036,
+      "plTotal": 350525.72126083897,
+      "carteiraDireitosCreditorios": 280955.6621626004,
       "creditosVencidos": 13570.07516525001,
       "plSenior": 187788.73946851032,
       "plSubordinada": 149861.99132603675,
-      "cobertura": 0.9631835148740729
+      "cobertura": 0.9631889305157787
     },
     {
       "mes": "2022-11",
       "fundos": 1854,
-      "plTotal": 369886.87644208974,
-      "carteiraDireitosCreditorios": 279425.8949214299,
+      "plTotal": 369899.2213650897,
+      "carteiraDireitosCreditorios": 279442.28396651,
       "creditosVencidos": 11745.828374550001,
-      "plSenior": 203883.44486241284,
-      "plSubordinada": 154652.09078216512,
-      "cobertura": 0.9693184995488838
+      "plSenior": 203877.91492869283,
+      "plSubordinada": 154651.4569138751,
+      "cobertura": 0.9692694862955646
     },
     {
       "mes": "2022-12",
@@ -1196,9 +1196,9 @@
       "plTotal": 378898.51347124117,
       "carteiraDireitosCreditorios": 304887.2990779502,
       "creditosVencidos": 16508.653824180004,
-      "plSenior": 201337.87699279588,
+      "plSenior": 200629.99131176586,
       "plSubordinada": 156769.67513527343,
-      "cobertura": 0.9451979526735299
+      "cobertura": 0.9433296801523611
     },
     {
       "mes": "2023-01",
@@ -1213,32 +1213,32 @@
     {
       "mes": "2023-02",
       "fundos": 1955,
-      "plTotal": 376974.5701328296,
-      "carteiraDireitosCreditorios": 308703.0887850398,
+      "plTotal": 376974.4452714496,
+      "carteiraDireitosCreditorios": 308703.0887850498,
       "creditosVencidos": 14435.678897510006,
-      "plSenior": 203300.35960551642,
-      "plSubordinada": 165034.25884204416,
-      "cobertura": 0.9771971579069348
+      "plSenior": 203253.6605325964,
+      "plSubordinada": 164839.15372206818,
+      "cobertura": 0.9765560476626043
     },
     {
       "mes": "2023-03",
       "fundos": 2009,
-      "plTotal": 384761.32551694027,
-      "carteiraDireitosCreditorios": 310168.1945157798,
+      "plTotal": 384935.9768567603,
+      "carteiraDireitosCreditorios": 310320.8146036798,
       "creditosVencidos": 13242.250984270011,
-      "plSenior": 204422.75595316704,
-      "plSubordinada": 173845.25224879602,
-      "cobertura": 0.9834852286781085
+      "plSenior": 204407.65722322077,
+      "plSubordinada": 173824.16063641608,
+      "cobertura": 0.9829449898650988
     },
     {
       "mes": "2023-04",
       "fundos": 2034,
-      "plTotal": 399278.38923385023,
-      "carteiraDireitosCreditorios": 322446.87299353053,
+      "plTotal": 399253.5404091702,
+      "carteiraDireitosCreditorios": 322434.8259868705,
       "creditosVencidos": 13799.723526049984,
       "plSenior": 210836.7570713893,
-      "plSubordinada": 177956.87771909818,
-      "cobertura": 0.9740738093697402
+      "plSubordinada": 177932.77791365737,
+      "cobertura": 0.9740721957701088
     },
     {
       "mes": "2023-05",
@@ -1273,388 +1273,408 @@
     {
       "mes": "2023-08",
       "fundos": 2129,
-      "plTotal": 416972.34004330065,
-      "carteiraDireitosCreditorios": 334559.5561126298,
+      "plTotal": 416972.31580910063,
+      "carteiraDireitosCreditorios": 334559.5319979898,
       "creditosVencidos": 14152.123134999996,
       "plSenior": 190576.37587199506,
-      "plSubordinada": 191365.62670898996,
-      "cobertura": 0.9162436450512669
+      "plSubordinada": 191360.67589880995,
+      "cobertura": 0.9162318250681136
     },
     {
       "mes": "2023-09",
       "fundos": 2276,
-      "plTotal": 425406.21100732905,
-      "carteiraDireitosCreditorios": 346161.1468175901,
-      "creditosVencidos": 12115.06930776,
-      "plSenior": 203058.8684724708,
-      "plSubordinada": 212836.87524165562,
-      "cobertura": 0.9779478868362168
+      "plTotal": 425405.563753739,
+      "carteiraDireitosCreditorios": 346166.8041082801,
+      "creditosVencidos": 12161.33299924,
+      "plSenior": 203058.80383515943,
+      "plSubordinada": 212831.35109143562,
+      "cobertura": 0.9779362372301194
     },
     {
       "mes": "2023-10",
       "fundos": 2270,
-      "plTotal": 434140.28569990996,
-      "carteiraDireitosCreditorios": 354633.9501239899,
-      "creditosVencidos": 14490.58295704002,
-      "plSenior": 197177.59163913256,
-      "plSubordinada": 225708.15728927797,
-      "cobertura": 0.97425975780588
+      "plTotal": 434140.09955889994,
+      "carteiraDireitosCreditorios": 354640.01916589984,
+      "creditosVencidos": 14536.846648520019,
+      "plSenior": 197185.59887865256,
+      "plSubordinada": 225699.96390874797,
+      "cobertura": 0.9742597467695471
     },
     {
       "mes": "2023-11",
       "fundos": 2272,
-      "plTotal": 448480.8714482999,
-      "carteiraDireitosCreditorios": 360373.05106194987,
-      "creditosVencidos": 14816.610748989988,
-      "plSenior": 204949.66675032055,
-      "plSubordinada": 234502.23467456657,
-      "cobertura": 0.9800374861204715
+      "plTotal": 448486.1192831899,
+      "carteiraDireitosCreditorios": 360375.7554788399,
+      "creditosVencidos": 14862.510493989988,
+      "plSenior": 204962.8330592715,
+      "plSubordinada": 234494.3163446433,
+      "cobertura": 0.9800377197062444
     },
     {
       "mes": "2023-12",
       "fundos": 2404,
-      "plTotal": 486333.59009322047,
-      "carteiraDireitosCreditorios": 388564.3861675599,
-      "creditosVencidos": 15765.137444630005,
-      "plSenior": 209256.6820533108,
-      "plSubordinada": 266112.19190651394,
-      "cobertura": 0.977632958998729
+      "plTotal": 486366.2926856204,
+      "carteiraDireitosCreditorios": 388562.7051077999,
+      "creditosVencidos": 15811.401136110004,
+      "plSenior": 209299.7402521409,
+      "plSubordinada": 266101.95828832395,
+      "cobertura": 0.9776344629274267
     },
     {
       "mes": "2024-01",
       "fundos": 2425,
-      "plTotal": 495376.8488565501,
-      "carteiraDireitosCreditorios": 383482.33133690996,
-      "creditosVencidos": 16768.57335679999,
-      "plSenior": 219393.65350802027,
-      "plSubordinada": 269129.4272252955,
-      "cobertura": 0.9866423745412328
+      "plTotal": 495376.22607970005,
+      "carteiraDireitosCreditorios": 383481.70259575,
+      "creditosVencidos": 16814.83704827999,
+      "plSenior": 219402.31827082028,
+      "plSubordinada": 269120.13968564547,
+      "cobertura": 0.9866423577482996
     },
     {
       "mes": "2024-02",
       "fundos": 2447,
-      "plTotal": 494426.3661832998,
-      "carteiraDireitosCreditorios": 384516.2334879297,
+      "plTotal": 494419.81845711987,
+      "carteiraDireitosCreditorios": 384515.4704673197,
       "creditosVencidos": 16516.538566320003,
-      "plSenior": 213663.08700750765,
-      "plSubordinada": 273498.6421286299,
-      "cobertura": 0.9854214954752277
+      "plSenior": 213670.51929924387,
+      "plSubordinada": 273484.70500231243,
+      "cobertura": 0.9854213024084204
     },
     {
       "mes": "2024-03",
       "fundos": 2490,
-      "plTotal": 502166.35031928925,
-      "carteiraDireitosCreditorios": 400539.62847218,
+      "plTotal": 502165.4121746293,
+      "carteiraDireitosCreditorios": 400538.69862592,
       "creditosVencidos": 17891.715058319995,
-      "plSenior": 214765.4002494763,
-      "plSubordinada": 278519.7087065394,
-      "cobertura": 0.9824681007164616
+      "plSenior": 214774.72094524634,
+      "plSubordinada": 278509.4498661094,
+      "cobertura": 0.982468067963394
     },
     {
       "mes": "2024-04",
       "fundos": 2538,
-      "plTotal": 544337.3232369405,
-      "carteiraDireitosCreditorios": 417585.10532401904,
-      "creditosVencidos": 15894.504568859988,
-      "plSenior": 250007.02298929292,
-      "plSubordinada": 288112.24601454975,
-      "cobertura": 0.9893801024937732
+      "plTotal": 544262.9472257704,
+      "carteiraDireitosCreditorios": 417521.4196725391,
+      "creditosVencidos": 15941.247437589987,
+      "plSenior": 250008.26049382554,
+      "plSubordinada": 288036.57667518966,
+      "cobertura": 0.9893786512363991
     },
     {
       "mes": "2024-05",
       "fundos": 2612,
-      "plTotal": 550993.3514689896,
-      "carteiraDireitosCreditorios": 420904.45777278993,
-      "creditosVencidos": 18568.427145679972,
-      "plSenior": 242100.32447282138,
-      "plSubordinada": 306721.6771406733,
-      "cobertura": 0.9968659617400714
+      "plTotal": 551000.2529618996,
+      "carteiraDireitosCreditorios": 420895.1303709699,
+      "creditosVencidos": 18568.93087140997,
+      "plSenior": 242114.5114246697,
+      "plSubordinada": 306714.3714764232,
+      "cobertura": 0.996866000995122
     },
     {
       "mes": "2024-06",
       "fundos": 2682,
-      "plTotal": 555720.9005777093,
-      "carteiraDireitosCreditorios": 429001.4402646004,
-      "creditosVencidos": 17256.015036960016,
-      "plSenior": 237893.0634354333,
-      "plSubordinada": 309892.5938507708,
-      "cobertura": 0.9857832480491432
+      "plTotal": 555719.3488438394,
+      "carteiraDireitosCreditorios": 429000.4330841304,
+      "creditosVencidos": 17256.518762690015,
+      "plSenior": 237932.63409185928,
+      "plSubordinada": 309851.41322819085,
+      "cobertura": 0.9857832083517392
     },
     {
       "mes": "2024-07",
       "fundos": 2744,
-      "plTotal": 611062.7378443412,
-      "carteiraDireitosCreditorios": 464894.2633973507,
-      "creditosVencidos": 21083.372685310012,
-      "plSenior": 271991.3714642693,
-      "plSubordinada": 328630.02463918383,
-      "cobertura": 0.9829806183631845
+      "plTotal": 611060.6047834612,
+      "carteiraDireitosCreditorios": 464892.6799916806,
+      "creditosVencidos": 21083.87641104001,
+      "plSenior": 272007.35830401926,
+      "plSubordinada": 328611.9386179538,
+      "cobertura": 0.9829805589527482
     },
     {
       "mes": "2024-08",
-      "fundos": 2810,
-      "plTotal": 624238.6192043509,
-      "carteiraDireitosCreditorios": 472974.9937268103,
-      "creditosVencidos": 23537.658001129996,
-      "plSenior": 286475.77406585607,
-      "plSubordinada": 334866.4436510348,
-      "cobertura": 0.9954396558288904
+      "fundos": 2812,
+      "plTotal": 625921.236960401,
+      "carteiraDireitosCreditorios": 472972.7855938203,
+      "creditosVencidos": 23538.16172686,
+      "plSenior": 288178.0366032164,
+      "plSubordinada": 334846.62387659494,
+      "cobertura": 0.9954519150647538
     },
     {
       "mes": "2024-09",
-      "fundos": 2881,
-      "plTotal": 639061.9127666685,
-      "carteiraDireitosCreditorios": 479266.65720540035,
-      "creditosVencidos": 23750.18027894,
-      "plSenior": 292300.29914591386,
-      "plSubordinada": 340884.3528579203,
-      "cobertura": 0.9908792065599945
+      "fundos": 2883,
+      "plTotal": 640871.9053266981,
+      "carteiraDireitosCreditorios": 479264.7676666304,
+      "creditosVencidos": 23750.684004669998,
+      "plSenior": 294131.3433050908,
+      "plSubordinada": 340863.3013326735,
+      "cobertura": 0.9909049661043451
     },
     {
       "mes": "2024-10",
-      "fundos": 3007,
-      "plTotal": 678424.0180062804,
-      "carteiraDireitosCreditorios": 495730.7608122613,
-      "creditosVencidos": 21858.290121599992,
-      "plSenior": 318565.86497538706,
-      "plSubordinada": 349669.6982897069,
-      "cobertura": 0.9849920121519405
+      "fundos": 3009,
+      "plTotal": 678638.9320220505,
+      "carteiraDireitosCreditorios": 495903.46219611133,
+      "creditosVencidos": 21859.322632869993,
+      "plSenior": 318617.4263831408,
+      "plSubordinada": 349816.34860268066,
+      "cobertura": 0.9849967649398884
     },
     {
       "mes": "2024-11",
-      "fundos": 3061,
-      "plTotal": 695585.0650767601,
-      "carteiraDireitosCreditorios": 504338.3456111607,
-      "creditosVencidos": 22769.922261050004,
-      "plSenior": 339024.78484634514,
-      "plSubordinada": 352518.1298060533,
-      "cobertura": 0.9941901517075065
+      "fundos": 3063,
+      "plTotal": 697717.6461282402,
+      "carteiraDireitosCreditorios": 506612.14311324066,
+      "creditosVencidos": 22770.954772320005,
+      "plSenior": 339894.35082896316,
+      "plSubordinada": 353781.14487643796,
+      "cobertura": 0.9942079095676516
     },
     {
       "mes": "2024-12",
-      "fundos": 3140,
-      "plTotal": 731837.1144510807,
-      "carteiraDireitosCreditorios": 549916.6688619098,
-      "creditosVencidos": 24682.888443069984,
-      "plSenior": 350064.5801771785,
-      "plSubordinada": 376757.52380377456,
-      "cobertura": 0.9932220820004597
+      "fundos": 3143,
+      "plTotal": 733651.5060495511,
+      "carteiraDireitosCreditorios": 551616.2883703097,
+      "creditosVencidos": 24683.920954339985,
+      "plSenior": 350934.68674357195,
+      "plSubordinada": 377701.64258507174,
+      "cobertura": 0.9932388444515299
     },
     {
       "mes": "2025-01",
-      "fundos": 3192,
-      "plTotal": 734607.0375726323,
-      "carteiraDireitosCreditorios": 545816.3954859301,
-      "creditosVencidos": 22134.36214747,
-      "plSenior": 351064.932570489,
-      "plSubordinada": 381099.2042656556,
-      "cobertura": 0.9966706870321425
+      "fundos": 3198,
+      "plTotal": 736872.1149211724,
+      "carteiraDireitosCreditorios": 547765.6003292801,
+      "creditosVencidos": 22093.21647971,
+      "plSenior": 351974.5838168521,
+      "plSubordinada": 382454.81763766106,
+      "cobertura": 0.996680921035081
     },
     {
       "mes": "2025-02",
-      "fundos": 3254,
-      "plTotal": 744347.3379258598,
-      "carteiraDireitosCreditorios": 553827.9961295519,
-      "creditosVencidos": 23218.873812460013,
-      "plSenior": 347764.28801847907,
-      "plSubordinada": 387107.2803305908,
-      "cobertura": 0.9874610140934507
+      "fundos": 3261,
+      "plTotal": 746625.6700778601,
+      "carteiraDireitosCreditorios": 555832.9146483019,
+      "creditosVencidos": 23182.027043860016,
+      "plSenior": 348701.57568033924,
+      "plSubordinada": 388442.32462875854,
+      "cobertura": 0.9874992768747732
     },
     {
       "mes": "2025-03",
-      "fundos": 3316,
-      "plTotal": 752197.8896691869,
-      "carteiraDireitosCreditorios": 560388.0866711597,
-      "creditosVencidos": 23302.862309499986,
-      "plSenior": 350454.06891953014,
-      "plSubordinada": 395503.9555757328,
-      "cobertura": 0.991659443877025
+      "fundos": 3323,
+      "plTotal": 754652.0506454066,
+      "carteiraDireitosCreditorios": 562572.8852255697,
+      "creditosVencidos": 23254.645864489987,
+      "plSenior": 351598.1599947271,
+      "plSubordinada": 396814.8443453076,
+      "cobertura": 0.9916878813042314
     },
     {
       "mes": "2025-04",
-      "fundos": 3388,
-      "plTotal": 768273.6820892305,
-      "carteiraDireitosCreditorios": 563859.2402971803,
-      "creditosVencidos": 23517.243767280008,
-      "plSenior": 360633.42336744006,
-      "plSubordinada": 401369.74194665777,
-      "cobertura": 0.9918661805062406
+      "fundos": 3395,
+      "plTotal": 770834.7827009405,
+      "carteiraDireitosCreditorios": 566045.3838244801,
+      "creditosVencidos": 23473.462622600007,
+      "plSenior": 363137.13043532096,
+      "plSubordinada": 401425.66608201334,
+      "cobertura": 0.991891672604783
     },
     {
       "mes": "2025-05",
-      "fundos": 3452,
-      "plTotal": 782675.2596649788,
-      "carteiraDireitosCreditorios": 567649.2964036996,
-      "creditosVencidos": 23145.021079310016,
-      "plSenior": 362009.1435465665,
-      "plSubordinada": 407120.77594459226,
-      "cobertura": 0.9828011803385462
+      "fundos": 3471,
+      "plTotal": 788001.0994161088,
+      "carteiraDireitosCreditorios": 572019.5689074196,
+      "creditosVencidos": 23095.36527121002,
+      "plSenior": 367363.0085766634,
+      "plSubordinada": 407093.5575653076,
+      "cobertura": 0.9829174214928967
     },
     {
       "mes": "2025-06",
-      "fundos": 3592,
-      "plTotal": 857969.5240646995,
-      "carteiraDireitosCreditorios": 587722.7259477589,
+      "fundos": 3598,
+      "plTotal": 860903.9945721895,
+      "carteiraDireitosCreditorios": 590057.0598943188,
       "creditosVencidos": 23623.17828676001,
-      "plSenior": 398497.7010666086,
-      "plSubordinada": 454274.4622821219,
-      "cobertura": 0.994095726463393
+      "plSenior": 401225.1460731421,
+      "plSubordinada": 454481.6097552914,
+      "cobertura": 0.9941158517232023
     },
     {
       "mes": "2025-07",
-      "fundos": 3647,
-      "plTotal": 872287.7690191721,
-      "carteiraDireitosCreditorios": 587766.8454738779,
+      "fundos": 3653,
+      "plTotal": 873203.021315072,
+      "carteiraDireitosCreditorios": 588366.324536108,
       "creditosVencidos": 21343.912203789987,
-      "plSenior": 408250.1903280882,
-      "plSubordinada": 458151.1713856027,
-      "cobertura": 0.9932573146286533
+      "plSenior": 408340.2341836323,
+      "plSubordinada": 458976.3040949596,
+      "cobertura": 0.9932643820094528
     },
     {
       "mes": "2025-08",
-      "fundos": 3717,
-      "plTotal": 879040.719775581,
-      "carteiraDireitosCreditorios": 594478.356968311,
+      "fundos": 3723,
+      "plTotal": 879988.0634887111,
+      "carteiraDireitosCreditorios": 595081.2422101811,
       "creditosVencidos": 22459.340047409994,
-      "plSenior": 407338.3933300274,
-      "plSubordinada": 468877.64847937203,
-      "cobertura": 0.996900163688372
+      "plSenior": 407429.76737519086,
+      "plSubordinada": 469733.61814721586,
+      "cobertura": 0.996903500790957
     },
     {
       "mes": "2025-09",
-      "fundos": 3758,
-      "plTotal": 887983.2882266701,
-      "carteiraDireitosCreditorios": 586940.9763789801,
+      "fundos": 3765,
+      "plTotal": 888375.8875347001,
+      "carteiraDireitosCreditorios": 587061.0451502801,
       "creditosVencidos": 24828.745528089978,
-      "plSenior": 413794.7083847032,
-      "plSubordinada": 466108.8869764678,
-      "cobertura": 0.9908602410520269
+      "plSenior": 413838.8398077592,
+      "plSubordinada": 466457.11952008726,
+      "cobertura": 0.9908642801790326
     },
     {
       "mes": "2025-10",
-      "fundos": 3825,
-      "plTotal": 894482.6435316309,
-      "carteiraDireitosCreditorios": 614798.5296427417,
+      "fundos": 3836,
+      "plTotal": 894997.8341078307,
+      "carteiraDireitosCreditorios": 614952.0723286716,
       "creditosVencidos": 23314.306398600012,
-      "plSenior": 421287.7763934243,
-      "plSubordinada": 467862.96471749013,
-      "cobertura": 0.9941120350608192
+      "plSenior": 421407.9419028393,
+      "plSubordinada": 468236.7011485674,
+      "cobertura": 0.9940916394750373
     },
     {
       "mes": "2025-11",
-      "fundos": 3871,
-      "plTotal": 889809.366323581,
-      "carteiraDireitosCreditorios": 617736.7417110214,
+      "fundos": 3891,
+      "plTotal": 907513.476973281,
+      "carteiraDireitosCreditorios": 631502.1138543611,
       "creditosVencidos": 22811.962803960017,
-      "plSenior": 406038.9422262552,
-      "plSubordinada": 474356.9087286215,
-      "cobertura": 0.9896431865996355
+      "plSenior": 421332.6704916013,
+      "plSubordinada": 476267.5639673949,
+      "cobertura": 0.9892945759581091
     },
     {
       "mes": "2025-12",
-      "fundos": 4008,
-      "plTotal": 922134.7082472695,
-      "carteiraDireitosCreditorios": 642604.3984357299,
-      "creditosVencidos": 31402.969353199984,
-      "plSenior": 594754.705338834,
-      "plSubordinada": 312318.64067759376,
-      "cobertura": 0.9835748928665223
+      "fundos": 4018,
+      "plTotal": 921659.1091855394,
+      "carteiraDireitosCreditorios": 642709.5837146599,
+      "creditosVencidos": 31421.01527456999,
+      "plSenior": 593997.4851953047,
+      "plSubordinada": 312880.4353206371,
+      "cobertura": 0.9838708065838179
     },
     {
       "mes": "2026-01",
-      "fundos": 4066,
-      "plTotal": 900944.4272572093,
-      "carteiraDireitosCreditorios": 631706.8472999819,
-      "creditosVencidos": 28817.129823330037,
-      "plSenior": 608045.3630519303,
-      "plSubordinada": 280388.86993285763,
-      "cobertura": 0.9862619346363126
+      "fundos": 4078,
+      "plTotal": 911054.0708690395,
+      "carteiraDireitosCreditorios": 639571.0563633017,
+      "creditosVencidos": 28287.407566260033,
+      "plSenior": 616850.6549039587,
+      "plSubordinada": 281142.23815197585,
+      "cobertura": 0.985809605227001
     },
     {
       "mes": "2026-02",
-      "fundos": 4099,
-      "plTotal": 906630.9388360032,
-      "carteiraDireitosCreditorios": 642897.5082016814,
-      "creditosVencidos": 27802.10531363998,
-      "plSenior": 609658.9446152792,
-      "plSubordinada": 280420.74294417416,
-      "cobertura": 0.9817936982872179
+      "fundos": 4109,
+      "plTotal": 907737.467741703,
+      "carteiraDireitosCreditorios": 643936.982778531,
+      "creditosVencidos": 27817.699335709985,
+      "plSenior": 610122.096840554,
+      "plSubordinada": 281264.9629011226,
+      "cobertura": 0.9820371487143451
     },
     {
       "mes": "2026-03",
-      "fundos": 4149,
-      "plTotal": 922449.5886428879,
-      "carteiraDireitosCreditorios": 657261.9261495317,
-      "creditosVencidos": 30207.995110639993,
-      "plSenior": 623681.1024494714,
-      "plSubordinada": 288337.92029941943,
-      "cobertura": 0.9888799659466472
+      "fundos": 4160,
+      "plTotal": 923779.4938942078,
+      "carteiraDireitosCreditorios": 657662.9823224016,
+      "creditosVencidos": 29483.045302139988,
+      "plSenior": 624388.8472844047,
+      "plSubordinada": 289584.93092492595,
+      "cobertura": 0.9895725963687355
     },
     {
       "mes": "2026-04",
-      "fundos": 4220,
-      "plTotal": 963820.8406966883,
-      "carteiraDireitosCreditorios": 687381.7818728602,
-      "creditosVencidos": 27204.81770208002,
-      "plSenior": 641961.4269308669,
-      "plSubordinada": 294926.0855230844,
-      "cobertura": 0.9722734950286993
+      "fundos": 4238,
+      "plTotal": 967208.0288249687,
+      "carteiraDireitosCreditorios": 688900.5726122101,
+      "creditosVencidos": 27159.69968647002,
+      "plSenior": 644600.4644759402,
+      "plSubordinada": 296047.19172203523,
+      "cobertura": 0.9726896574561312
     },
     {
       "mes": "2026-05",
-      "fundos": 4255,
-      "plTotal": 971735.821439302,
-      "carteiraDireitosCreditorios": 682088.2421297192,
-      "creditosVencidos": 20825.620596040004,
-      "plSenior": 658416.4827016707,
-      "plSubordinada": 301874.7652923562,
-      "cobertura": 0.9883516756509556
+      "fundos": 4275,
+      "plTotal": 975225.1735084117,
+      "carteiraDireitosCreditorios": 690412.3141558992,
+      "creditosVencidos": 20830.548672300007,
+      "plSenior": 661104.7275412946,
+      "plSubordinada": 302955.17327309644,
+      "cobertura": 0.9887155811479418
     },
     {
       "mes": "2026-06",
-      "fundos": 4311,
-      "plTotal": 999226.2397820512,
-      "carteiraDireitosCreditorios": 702708.5431827907,
-      "creditosVencidos": 21824.82626922999,
-      "plSenior": 673817.2081114352,
-      "plSubordinada": 311885.6087306832,
-      "cobertura": 0.9867316853665576
+      "fundos": 4349,
+      "plTotal": 1001578.104291581,
+      "carteiraDireitosCreditorios": 711164.2392557309,
+      "creditosVencidos": 21914.805549189994,
+      "plSenior": 676460.1215880456,
+      "plSubordinada": 313891.3584685494,
+      "cobertura": 0.9890439186610799
+    },
+    {
+      "mes": "2026-07",
+      "fundos": 4390,
+      "plTotal": 1015598.0264517182,
+      "carteiraDireitosCreditorios": 714480.692551472,
+      "creditosVencidos": 21324.24871900999,
+      "plSenior": 683430.2597619968,
+      "plSubordinada": 323776.8065005572,
+      "cobertura": 0.9918723641928009
+    },
+    {
+      "mes": "2026-08",
+      "fundos": 4400,
+      "plTotal": 989517.6570201128,
+      "carteiraDireitosCreditorios": 702062.7429825591,
+      "creditosVencidos": 21939.55918873,
+      "plSenior": 647236.218342758,
+      "plSubordinada": 323472.02741006034,
+      "cobertura": 0.9811367021691046
     }
   ],
   "classesUltimoMes": [
     {
       "rotulo": "Financeiro",
-      "valor": 350100.35060664045
+      "valor": 332659.25821092946
     },
     {
       "rotulo": "Comercial",
-      "valor": 123499.44887743992
+      "valor": 144168.1292220099
     },
     {
       "rotulo": "Cartão de crédito",
-      "valor": 78589.84371139001
+      "valor": 82833.15724176
     },
     {
       "rotulo": "Industrial",
-      "valor": 77397.24903533993
+      "valor": 78107.00725635004
     },
     {
       "rotulo": "Serviços",
-      "valor": 57579.98983701004
+      "valor": 57659.95272549997
     },
     {
       "rotulo": "Setor público",
-      "valor": 35300.03351285003
+      "valor": 30446.461592119984
     },
     {
       "rotulo": "Precatórios e ações judiciais",
-      "valor": 30814.02223109001
+      "valor": 28564.655288310016
     },
     {
       "rotulo": "Outras classes",
-      "valor": 12308.499231859998
+      "valor": 12674.291389340002
     }
   ],
-  "mesClasses": "2026-06",
+  "mesClasses": "2026-08",
   "quebraSubordinacao": "2025-12"
 }
